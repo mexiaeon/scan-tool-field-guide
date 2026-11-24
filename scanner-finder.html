@@ -50,7 +50,7 @@
  function card(key){const p=catalog[key];const amazon=p.url.startsWith("https://");return '<article class="result-card"><div class="result-tag">'+p.tag+'</div><h3>'+p.name+'</h3><p>'+p.desc+'</p><div class="result-links">'+(amazon?'<a href="'+p.url+'" target="_blank" rel="sponsored nofollow noopener">Check Amazon listing ↗</a>':'<a href="'+p.url+'">Read product review ↗</a>')+'<a href="'+p.guide+'">Read buying guide ↗</a></div></article>';}
  $('findBtn').addEventListener('click',()=>{
   const task=$('task').value,budget=$('budget').value,device=$('device').value,experience=$('experience').value;
-  const year=$('year').value.trim(),make=$('make').value.trim(),model=$('model').value.trim(),engine=$('engine').value.trim();
+  const year=$('year').value.trim(),make=$('make').value.trim(),model=$('model').value.trim(),engine=$('engine').value.trim(),market=$('market').value;
   if(year&&(Number(year)<1980||Number(year)>2027)){alert('Choose a model year between 1980 and 2027.');return;}
   const mk=make.toLowerCase(),isFord=mk==='ford',isGM=['chevrolet','gmc','buick','cadillac'].includes(mk),isTesla=mk==='tesla';
   const older=year&&Number(year)<1996,evHint=/\b(ev|electric|hybrid|plug.?in|phev|bev)\b/i.test(model+' '+engine);
