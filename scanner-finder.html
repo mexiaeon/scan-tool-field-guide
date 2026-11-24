@@ -105,6 +105,6 @@
   $('vehicleSummary').textContent='Vehicle entered: '+[year,make,model,engine].filter(Boolean).join(' ') + '. Original sales market: '+market+'. Official manufacturer checker links are provided for each result. This site does not receive or store your coverage results.';
   $('results').classList.add('show');$('results').scrollIntoView({behavior:'smooth',block:'start'});
  });
- $('resetBtn').addEventListener('click',()=>{['year','make','model','engine'].forEach(id=>$(id).value="");$('task').value="basic";$('budget').value="300";$('device').value="any";$('experience').value="diy";$('results').classList.remove('show');});
+ $('resetBtn').addEventListener('click',()=>{['year','make','model','engine'].forEach(id=>$(id).value="");['makeOther','modelOther','engineOther'].forEach(id=>{$(id).value="";$(id).hidden=true;});modelSelect.disabled=true;modelSelect.innerHTML='<option value="">Choose make first</option>';$('task').value="basic";$('budget').value="300";$('device').value="any";$('experience').value="diy";$('results').classList.remove('show');});
 })();
 </script></body></html>
