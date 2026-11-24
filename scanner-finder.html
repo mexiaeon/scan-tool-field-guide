@@ -56,6 +56,7 @@
   if((budget==="100"||budget==="300")&&keys.some(k=>["autel","topdon"].includes(k)))keys=keys.filter(k=>!["autel","topdon"].includes(k));
   if((budget==="100"||budget==="300")&&task==="active")intro+=" Advanced bidirectional tools may exceed your stated budget; consider saving more rather than buying a basic reader that cannot perform active tests.";
   if(experience==="shop"&&keys.length<2)keys.push("autel","topdon");
+  if(!keys.length){keys=["xtool"];intro+=" Your selected budget and device preference do not leave a strong match in this shortlist; the option shown is a research lead only and may not meet your preferred form factor or budget.";}
   keys=[...new Set(keys)].slice(0,3);
   $('resultTitle').textContent=title;$('resultIntro').textContent=intro;$('resultCards').innerHTML=keys.map(card).join("");
   $('compatibilityNote').textContent=task==="active"?"Critical check: ask the manufacturer to confirm the exact active test on your vehicle's year, make, model, engine and module. “Bidirectional” does not mean every component can be commanded.":"Before ordering, confirm that the scanner supports your exact vehicle system and function. Generic OBD2 compatibility does not guarantee ABS, SRS, transmission or service-function coverage.";
