@@ -106,3 +106,50 @@ button,input,select,textarea{max-width:100%;font:inherit}
  .article-hero h1{font-size:32px}
  .hero-actions .btn{width:100%}
 }
+
+
+/* Mobile layout correction: article pages, callouts and navigation */
+.article-layout{
+  grid-template-columns:minmax(0,760px) minmax(0,280px);
+  width:min(var(--max),calc(100% - 40px));
+}
+.article-body,.article-aside{min-width:0;width:100%;max-width:100%}
+.article-body>*{max-width:100%;min-width:0}
+.note,.callout,.product-brief,.related-reading,.aside-card{
+  box-sizing:border-box;
+  width:100%;
+  min-width:0;
+  max-width:100%;
+}
+.article-aside{display:grid;gap:16px;align-content:start;position:sticky;top:100px}
+.aside-card{
+  background:var(--panel);
+  border:1px solid var(--line);
+  border-radius:15px;
+  padding:18px;
+  overflow-wrap:anywhere;
+}
+.aside-card a{display:block;padding:8px 0;border-bottom:1px solid var(--line);font-size:13px}
+.aside-card a:last-child{border-bottom:0}
+@media(max-width:850px){
+  .article-layout{grid-template-columns:minmax(0,1fr);width:calc(100% - 32px)}
+  .article-body,.article-aside{grid-column:1;min-width:0}
+  .article-aside{position:static;display:none}
+}
+@media(max-width:620px){
+  html,body{overflow-x:hidden}
+  .topbar,.topbar .wrap,.topbar-inner{width:100%;max-width:100%;min-width:0}
+  .topbar-inner{display:flex;flex-direction:column;align-items:flex-start;justify-content:center;gap:2px;padding:7px 0;font-size:10px;line-height:1.4}
+  .article-hero .wrap,.breadcrumbs.wrap,.article-layout.wrap{width:calc(100% - 32px);max-width:100%}
+  .article-hero h1{max-width:100%;overflow-wrap:break-word}
+  .article-hero p{max-width:100%;font-size:16px!important}
+  .article-body{width:100%;max-width:100%;min-width:0}
+  .article-body .note,.article-body .callout,.article-body .product-brief,
+  .article-body .related-reading{width:100%;max-width:100%;min-width:0;margin-left:0;margin-right:0;padding:16px}
+  .article-body table{display:block;width:100%;max-width:100%;overflow-x:auto}
+  .article-body img,.article-body iframe,.article-body video{max-width:100%}
+  .article-meta{display:flex;flex-direction:column;align-items:flex-start;gap:5px}
+  .breadcrumbs{width:calc(100% - 32px);max-width:100%;overflow-wrap:anywhere}
+  .nav{width:calc(100% - 32px)}
+  .navlinks{box-sizing:border-box}
+}
