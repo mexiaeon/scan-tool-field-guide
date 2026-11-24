@@ -49,24 +49,54 @@
  function card(key){const p=catalog[key];const amazon=p.url.startsWith("https://");return '<article class="result-card"><div class="result-tag">'+p.tag+'</div><h3>'+p.name+'</h3><p>'+p.desc+'</p><div class="result-links">'+(amazon?'<a href="'+p.url+'" target="_blank" rel="sponsored nofollow noopener">Check Amazon listing ↗</a>':'<a href="'+p.url+'">Read product review ↗</a>')+'<a href="'+p.guide+'">Read buying guide ↗</a></div></article>';}
  $('findBtn').addEventListener('click',()=>{
   const task=$('task').value,budget=$('budget').value,device=$('device').value,experience=$('experience').value;
-  const year=$('year').value.trim(),make=$('make').value.trim(),model=$('model').value.trim();
-  if(year&&(Number(year)<1980||Number(year)>2027)){alert('Enter a model year between 1980 and 2027.');return;}
-  let keys=[],title="A practical place to start",intro="Based on your answers, compare these options before deciding.";
-  if(task==="active"){keys=["xtool"];if(budget==="high"||budget==="600"||budget==="flexible")keys.push("autel","topdon");title="You need bidirectional capability";intro="Start with a scanner that explicitly advertises active tests. Budget and form factor narrow the shortlist, but exact vehicle coverage is the deciding factor.";}
-  else if(task==="fordgm"){keys=["obdlink"];title="Enhanced Ford / GM data";intro="OBDLink MX+ is worth researching for supported Ford and GM networks and compatible apps. Confirm your specific vehicle and app requirements.";}
-  else if(task==="guided"){keys=["blue"];title="Guided DIY diagnostics";intro="A phone-based tool with enhanced codes and repair reports may be a better fit than paying for a professional tablet.";}
-  else if(task==="enhanced"){keys=["blue"];if(budget==="300"||budget==="600"||budget==="high"||budget==="flexible")keys.push("topdon","autel");title="You need more than engine codes";intro="Look for verified ABS, SRS, transmission or other module coverage. The exact system and function must be checked for your vehicle.";}
-  else {keys=["fox","blue"];title="Basic OBD2 troubleshooting";intro="A simple engine-code reader may be enough. Choose a phone-based tool for guided reports or a handheld reader if you prefer a built-in screen.";}
-  if(device==="handheld"){keys=keys.filter(k=>!["obdlink","blue"].includes(k));if(!keys.length)keys=["fox"];if(task==="active"&&keys[0]==="fox")keys=["autel","topdon"];}
-  if(device==="phone"){keys=keys.filter(k=>!["fox","autel","topdon"].includes(k));if(!keys.length)keys=["obdlink"];}
-  if((budget==="100"||budget==="300")&&keys.some(k=>["autel","topdon"].includes(k)))keys=keys.filter(k=>!["autel","topdon"].includes(k));
-  if((budget==="100"||budget==="300")&&task==="active")intro+=" Advanced bidirectional tools may exceed your stated budget; consider saving more rather than buying a basic reader that cannot perform active tests.";
-  if(experience==="shop"&&keys.length<2)keys.push("autel","topdon");
-  if(!keys.length){keys=["xtool"];intro+=" Your selected budget and device preference do not leave a strong match in this shortlist; the option shown is a research lead only and may not meet your preferred form factor or budget.";}
-  keys=[...new Set(keys)].slice(0,3);
-  $('resultTitle').textContent=title;$('resultIntro').textContent=intro;$('resultCards').innerHTML=keys.map(card).join("");
-  $('compatibilityNote').textContent=task==="active"?"Critical check: ask the manufacturer to confirm the exact active test on your vehicle's year, make, model, engine and module. “Bidirectional” does not mean every component can be commanded.":"Before ordering, confirm that the scanner supports your exact vehicle system and function. Generic OBD2 compatibility does not guarantee ABS, SRS, transmission or service-function coverage.";
-  $('vehicleSummary').textContent=(year||make||model? "Vehicle entered: "+[year,make,model].filter(Boolean).join(" ")+"." : "No vehicle details entered.")+" Your answers stay in this browser; this tool does not submit or store them.";
+  const year=$('year').value.trim(),make=$('make').value.trim(),model=$('model').value.trim(),engine=$('engine').value.trim();
+  if(year&&(Number(year)<1980||Number(year)>2027)){alert('Choose a model year between 1980 and 2027.');return;}
+  const mk=make.toLowerCase(),isFord=mk==='ford',isGM=['chevrolet','gmc','buick','cadillac'].includes(mk),isTesla=mk==='tesla';
+  const older=year&&Number(year)<1996,evHint=/\b(ev|electric|hybrid|plug.?in|phev|bev)\b/i.test(model+' '+engine);
+  const profiles={
+   fox:{tasks:['basic'],devices:['handheld'],budgets:['100','300','600','high','flexible'],min:1,max:2,shops:false},
+   blue:{tasks:['basic','guided','enhanced'],devices:['phone'],budgets:['100','300','600','high','flexible'],min:1,max:2,shops:false},
+   obdlink:{tasks:['fordgm','basic'],devices:['phone'],budgets:['100','300','600','high','flexible'],min:1,max:2,shops:false,makeOnly:true},
+   xtool:{tasks:['active','enhanced'],devices:['phone','handheld'],budgets:['300','600','high','flexible'],min:2,max:3,shops:true},
+   topdon:{tasks:['active','enhanced'],devices:['handheld'],budgets:['600','high','flexible'],min:3,max:3,shops:true},
+   autel:{tasks:['active','enhanced'],devices:['handheld'],budgets:['600','high','flexible'],min:3,max:3,shops:true}
+  };
+  const score={fox:0,blue:0,obdlink:0,xtool:0,topdon:0,autel:0};
+  Object.keys(profiles).forEach(k=>{const p=profiles[k];if(p.tasks.includes(task))score[k]+=5;if(p.devices.includes(device)||device==='any')score[k]+=3;if(p.budgets.includes(budget))score[k]+=3;if(experience==='shop'&&p.shops)score[k]+=3;if(experience==='diy'&&!p.shops)score[k]+=1;if(p.makeOnly&&!isFord&&!isGM)score[k]-=100;if((budget==='100'||budget==='300')&&p.min>=3)score[k]-=100;if((budget==='100')&&k==='xtool')score[k]-=3;});
+  if(task==='fordgm'){if(isFord||isGM)score.obdlink+=5;else score.obdlink-=100;}
+  if(task==='active'){score.xtool+=5;score.topdon+=2;score.autel+=2;score.fox-=100;score.blue-=100;score.obdlink-=100;}
+  if(task==='guided'){score.blue+=5;score.fox-=2;}
+  if(task==='basic'){score.fox+=2;score.blue+=2;}
+  if(device==='handheld'){score.fox+=2;score.xtool+=2;score.topdon+=2;score.autel+=2;score.blue-=5;score.obdlink-=5;}
+  if(device==='phone'){score.blue+=2;score.obdlink+=2;score.fox-=5;score.topdon-=5;score.autel-=5;}
+  if(isFord||isGM){score.obdlink+=2;}else{score.obdlink-=2;}
+  if(isTesla){score.fox-=2;score.blue-=2;score.obdlink-=2;}
+  if(older){score.fox-=2;score.blue-=2;score.obdlink-=2;}
+  const ranked=Object.keys(score).filter(k=>score[k]>0).sort((a,b)=>score[b]-score[a]);
+  let keys=ranked.slice(0,3);
+  if(!keys.length)keys=task==='active'?['xtool']:task==='fordgm'&&(isFord||isGM)?['obdlink']:task==='guided'?['blue']:['fox','blue'];
+  const reasons={
+   fox:'A straightforward handheld starting point for basic engine-code checks; it is not a full-system or active-test tool.',
+   blue:'A phone-based option for enhanced code information and guided DIY reports on supported vehicles; it does not perform bidirectional active tests.',
+   obdlink:(isFord||isGM)?'Your selected Ford/GM make makes this adapter relevant to investigate for supported enhanced data and compatible apps. Confirm exact model-year and app coverage.':'This adapter is most relevant to supported Ford/GM use, so it is not a strong match for the make entered.',
+   xtool:'A phone-connected option to investigate for supported full-system diagnostics and bidirectional active tests. Confirm the exact operation for your vehicle.',
+   topdon:'A handheld tablet-style option to investigate for broader system diagnostics and supported bidirectional tests. Verify exact vehicle coverage.',
+   autel:'A higher-tier tablet option to investigate for broader system diagnostics and supported active tests. Verify exact vehicle coverage.'
+  };
+  $('resultTitle').textContent=task==='active'?'Best starting points for active tests':task==='fordgm'?'Enhanced-data options for your vehicle':task==='guided'?'Options for guided DIY diagnostics':task==='enhanced'?'Options for additional vehicle systems':'Options for basic OBD2 diagnostics';
+  $('resultIntro').textContent='Ranked using your selected diagnostic task, budget, preferred device, experience and vehicle make. This is a shortlist—not a verified fitment result.';
+  $('resultCards').innerHTML=keys.map(k=>{const p=catalog[k];const amazon=p.url.startsWith('https://');return '<article class="result-card"><div class="result-tag">'+p.tag+'</div><h3>'+p.name+'</h3><p>'+reasons[k]+'</p><div class="result-links">'+(amazon?'<a href="'+p.url+'" target="_blank" rel="sponsored nofollow noopener">View on Amazon ↗</a>':'<a href="'+p.url+'">Read product review ↗</a>')+'<a href="'+p.guide+'">Read buying guide ↗</a></div></article>';}).join('');
+  let warnings=[];
+  if(older)warnings.push('This vehicle year may predate standard US OBD-II requirements. Confirm the connector and protocol before choosing a generic OBD-II scanner.');
+  if(isTesla)warnings.push('Tesla diagnostics use manufacturer-specific access and procedures. Do not assume a generic OBD-II scanner can access vehicle systems; confirm the exact adapter and software required.');
+  if(evHint)warnings.push('Your model/engine entry suggests an EV or hybrid. Confirm high-voltage battery, charging and manufacturer-specific system support separately; ordinary OBD-II coverage does not establish this.');
+  if(isFord||isGM)warnings.push('Enhanced Ford/GM data varies by model year, module and app. Confirm the exact PID, module and app support before purchase.');
+  if(make&&['BMW','Mercedes-Benz','Audi','Volkswagen','Porsche','Volvo','Jaguar','Land Rover'].includes(make))warnings.push('European makes can require brand-specific software, gateways or subscriptions. Confirm the exact module and service function for this model year.');
+  if(!year||!make||!model)warnings.push('Add the year, make and model for a more useful shortlist. Engine/trim can further narrow compatibility checks.');
+  warnings.push('Before buying, verify the exact year, make, model, engine, module and requested function with the scanner maker. Vehicle details in this tool do not connect to a live coverage database.');
+  if((budget==='100'||budget==='300')&&task==='active')warnings.push('Your budget may be too low for a reliable bidirectional tool. Do not substitute a basic code reader if active tests are essential.');
+  $('compatibilityNote').textContent=warnings.join(' ');
+  $('vehicleSummary').textContent='Vehicle entered: '+[year,make,model,engine].filter(Boolean).join(' ') + '. Ranked by task, budget, device and experience; no compatibility lookup was performed. Your answers stay in this browser.';
   $('results').classList.add('show');$('results').scrollIntoView({behavior:'smooth',block:'start'});
  });
  $('resetBtn').addEventListener('click',()=>{['year','make','model','engine'].forEach(id=>$(id).value="");$('task').value="basic";$('budget').value="300";$('device').value="any";$('experience').value="diy";$('results').classList.remove('show');});
