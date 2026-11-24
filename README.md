@@ -14,7 +14,8 @@ A responsive, US-focused informational website about automotive diagnostic scann
 - `privacy.html` — starter privacy policy
 - `assets/` — styles, navigation script and logo
 - `robots.txt` — crawler rules and sitemap pointer
-- `sitemap.xml` — canonical public URLs for search engines
+- `sitemap.xml` — XML sitemap for search engines
+- `sitemap.txt` — plain-text sitemap fallback (one URL per line)
 - `404.html` — helpful not-found page, excluded from indexing
 
 ## Before applying to affiliate programs or promoting the site
@@ -37,7 +38,7 @@ This is a static website and requires no build step. Enable GitHub Pages from th
 
 ## Technical SEO baseline
 
-The site currently includes unique page titles and descriptions, canonical URLs, Open Graph title/description metadata, JSON-LD for the website/organization, guide articles and breadcrumbs, a visible breadcrumb trail on guide pages, an XML sitemap, a sitemap reference in robots.txt, and a noindex custom 404 page. Internal links use descriptive anchor text and the pages are designed to work without client-side JavaScript for core content.
+The site currently includes unique page titles and descriptions, canonical URLs, Open Graph title/description metadata, JSON-LD for the website/organization, guide articles and breadcrumbs, a visible breadcrumb trail on guide pages, XML and plain-text sitemaps, sitemap references in robots.txt, and a noindex custom 404 page. Internal links use descriptive anchor text and the pages are designed to work without client-side JavaScript for core content.
 
 ## Search Console follow-up
 
