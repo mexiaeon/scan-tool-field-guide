@@ -44,11 +44,10 @@
  engineSelect.addEventListener("change",()=>showOther(engineSelect,$("engineOther")));
  for(let y=2026;y>=1980;y--){const o=document.createElement("option");o.value=String(y);o.textContent=String(y);$("year").appendChild(o);}
  const catalog={
-  xtool:{name:"XTOOL Anyscan A30M V2.0",tag:"Consider for bidirectional active tests",desc:"A phone/tablet-connected option to investigate when you need supported component commands and broader system diagnostics. Verify the exact V2.0 model and the active test you need for your vehicle.",url:"https://www.amazon.com/dp/B0FLJSZQHN?tag=smartfin0e6fa-20",guide:"guides/best-obd2-scanners-under-300.html"},
+  xtool:{name:"XTOOL Anyscan A30M",tag:"Consider for bidirectional active tests",desc:"A phone/tablet-connected option to investigate when you need supported component commands and broader system diagnostics. Verify the exact model version and the active test you need for your vehicle.",url:"https://www.amazon.com/dp/B0FLJSZQHN?tag=smartfin0e6fa-20",guide:"guides/best-obd2-scanners-under-300.html"},
   obdlink:{name:"OBDLink MX+",tag:"Enhanced data and app flexibility",desc:"A Bluetooth adapter to research if you want enhanced data and compatible apps, particularly for supported Ford and GM networks. It is not a standalone tablet or a general-purpose bidirectional scan tool.",url:"https://www.amazon.com/dp/B07JFRFJG6?tag=smartfin0e6fa-20",guide:"guides/best-obd2-scanners-under-300.html"},
   blue:{name:"BlueDriver Bluetooth Pro",tag:"Guided DIY diagnostics",desc:"A phone-based reader with enhanced code coverage and repair reports on supported vehicles. Not intended for bidirectional active tests.",url:"https://www.amazon.com/dp/B00652G4TS?tag=smartfin0e6fa-20",guide:"guides/best-obd2-scanners-under-300.html"},
   fox:{name:"FOXWELL NT301",tag:"Basic engine-code reading",desc:"A simple wired handheld reader with its own screen for check-engine diagnostics and basic live data. Not a full-system or bidirectional tool.",url:"https://www.amazon.com/dp/B00UJV3E12?tag=smartfin0e6fa-20",guide:"guides/best-obd2-scanners-under-300.html"},
-  autel:{name:"Autel MaxiCOM MK900-BT",tag:"Higher-budget tablet-style diagnostics",desc:"A more advanced tablet scanner to compare if you need broader system access, wireless VCI and supported active tests. Confirm the precise feature and vehicle coverage before buying.",url:"https://www.amazon.com/dp/B07PGYY8SS?tag=smartfin0e6fa-20",guide:"guides/autel-vs-xtool-vs-topdon-comparison.html"},
   topdon:{name:"TOPDON ArtiDiag900 Lite",tag:"Tablet-style full-system diagnostics",desc:"A tablet-style option with full-system diagnostic and bidirectional capabilities advertised by TOPDON. Confirm the exact function for your vehicle and check the current seller bundle.",url:"https://www.amazon.com/dp/B0C33Y285Y?tag=smartfin0e6fa-20",guide:"guides/autel-vs-xtool-vs-topdon-comparison.html"}
  };
  function card(key){const p=catalog[key];return '<article class="result-card"><div class="result-tag">'+p.tag+'</div><h3>'+p.name+'</h3><p>'+p.desc+'</p><div class="result-links"><a href="'+p.url+'" target="_blank" rel="sponsored nofollow noopener">Check Amazon listing ↗</a><a href="'+p.guide+'">Read buying guide ↗</a></div></article>';}
@@ -66,14 +65,14 @@
    topdon:{tasks:['active','enhanced'],devices:['handheld'],budgets:['600','high','flexible'],min:3,max:3,shops:true},
    autel:{tasks:['active','enhanced'],devices:['handheld'],budgets:['600','high','flexible'],min:3,max:3,shops:true}
   };
-  const score={fox:0,blue:0,obdlink:0,xtool:0,topdon:0,autel:0};
+  const score={fox:0,blue:0,obdlink:0,xtool:0,topdon:0};
   Object.keys(profiles).forEach(k=>{const p=profiles[k];if(p.tasks.includes(task))score[k]+=5;if(p.devices.includes(device)||device==='any')score[k]+=3;if(p.budgets.includes(budget))score[k]+=3;if(experience==='shop'&&p.shops)score[k]+=3;if(experience==='diy'&&!p.shops)score[k]+=1;if(p.makeOnly&&!isFord&&!isGM)score[k]-=100;if((budget==='100'||budget==='300')&&p.min>=3)score[k]-=100;if((budget==='100')&&k==='xtool')score[k]-=3;});
   if(task==='fordgm'){if(isFord||isGM)score.obdlink+=5;else score.obdlink-=100;}
-  if(task==='active'){score.xtool+=5;score.topdon+=2;score.autel+=2;score.fox-=100;score.blue-=100;score.obdlink-=100;}
+  if(task==='active'){score.xtool+=5;score.topdon+=2;score.fox-=100;score.blue-=100;score.obdlink-=100;}
   if(task==='guided'){score.blue+=5;score.fox-=2;}
   if(task==='basic'){score.fox+=2;score.blue+=2;}
   if(device==='handheld'){score.fox+=2;score.xtool+=2;score.topdon+=2;score.autel+=2;score.blue-=5;score.obdlink-=5;}
-  if(device==='phone'){score.blue+=2;score.obdlink+=2;score.fox-=5;score.topdon-=5;score.autel-=5;}
+  if(device==='phone'){score.blue+=2;score.obdlink+=2;score.fox-=5;score.topdon-=5;}
   if(isFord||isGM){score.obdlink+=2;}else{score.obdlink-=2;}
   if(isTesla){score.fox-=2;score.blue-=2;score.obdlink-=2;}
   if(older){score.fox-=2;score.blue-=2;score.obdlink-=2;}
@@ -86,7 +85,6 @@
    obdlink:(isFord||isGM)?'Your selected Ford/GM make makes this adapter relevant to investigate for supported enhanced data and compatible apps. Confirm exact model-year and app coverage.':'This adapter is most relevant to supported Ford/GM use, so it is not a strong match for the make entered.',
    xtool:'A phone-connected option to investigate for supported full-system diagnostics and bidirectional active tests. Confirm the exact operation for your vehicle.',
    topdon:'A handheld tablet-style option to investigate for broader system diagnostics and supported bidirectional tests. Verify exact vehicle coverage.',
-   autel:'A higher-tier tablet option to investigate for broader system diagnostics and supported active tests. Verify exact vehicle coverage.'
   };
   $('resultTitle').textContent=task==='active'?'Best starting points for active tests':task==='fordgm'?'Enhanced-data options for your vehicle':task==='guided'?'Options for guided DIY diagnostics':task==='enhanced'?'Options for additional vehicle systems':'Options for basic OBD2 diagnostics';
   $('resultIntro').textContent='Ranked using your selected diagnostic task, budget, preferred device, experience and vehicle make. This is a shortlist—not a verified fitment result.';
