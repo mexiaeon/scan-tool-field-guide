@@ -153,3 +153,41 @@ button,input,select,textarea{max-width:100%;font:inherit}
   .nav{width:calc(100% - 32px)}
   .navlinks{box-sizing:border-box}
 }
+
+/* Product review purchase checklist: keep the Amazon CTA readable and tappable */
+.purchase-checklist{
+  overflow-wrap:anywhere;
+}
+.purchase-checklist ol{
+  padding-left:22px;
+  margin:12px 0 16px;
+}
+.purchase-checklist li{
+  padding-left:2px;
+}
+.purchase-checklist .btn{
+  max-width:100%;
+  white-space:normal;
+  text-align:center;
+  line-height:1.4;
+}
+.purchase-checklist .disclaimer{
+  margin:12px 0 0;
+}
+@media(max-width:620px){
+  .article-body .purchase-checklist{
+    padding:16px;
+    margin:22px 0;
+  }
+  .purchase-checklist .btn{
+    display:flex;
+    width:100%;
+    min-height:48px;
+    padding:13px 14px;
+    overflow-wrap:anywhere;
+    word-break:normal;
+  }
+  .purchase-checklist ol{
+    padding-left:20px;
+  }
+}
