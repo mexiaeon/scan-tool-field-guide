@@ -191,3 +191,41 @@ button,input,select,textarea{max-width:100%;font:inherit}
     padding-left:20px;
   }
 }
+
+/* Product snapshot panels: readable product facts without unlicensed product photography */
+.product-buying-panel{padding:24px;margin:24px 0;background:linear-gradient(145deg,#1a252a,#12191d);border-color:#46565c}
+.product-brief-head{display:flex;justify-content:space-between;align-items:flex-start;gap:16px}
+.product-brief-head h2{font-size:26px;margin:6px 0 8px;color:#fff}
+.product-brief .brief-summary{color:#bdc8c9;margin:0;max-width:620px}
+.brief-chip{flex:0 0 auto;border:1px solid #6a5739;background:#292319;color:#f1d39b;border-radius:999px;padding:7px 11px;font-size:11px;font-weight:800}
+.brief-facts{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin:20px 0}
+.brief-facts div{padding:13px;border:1px solid var(--line);border-radius:11px;background:#11191d;min-width:0}
+.brief-facts strong,.brief-facts span{display:block}
+.brief-facts strong{color:var(--accent2);font-size:15px}
+.brief-facts span{font-size:11px;color:var(--muted);margin-top:3px}
+.brief-points{margin:0 0 18px!important}
+.brief-warning{padding:13px 15px;border-left:3px solid var(--accent);border-radius:0 10px 10px 0;background:#211d16;color:#d6c7ac;font-size:13px;margin:16px 0}
+.brief-warning strong{color:#f2d49f}
+.brief-cta{width:100%;min-height:48px}
+.product-buying-panel .disclaimer{margin:12px 0 0}
+.comparison-intro{padding:18px 20px;border:1px solid var(--line);border-radius:14px;background:var(--panel);margin:0 0 18px}
+.comparison-intro>p:first-child{margin-bottom:12px}
+.comparison-key{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin:14px 0}
+.comparison-key span{padding:12px;border:1px solid var(--line);border-radius:10px;background:#11191d;color:#cbd5d6;font-size:12px}
+.comparison-key b{color:var(--accent2)}
+.comparison-table-wrap{width:100%;max-width:100%;overflow-x:auto;-webkit-overflow-scrolling:touch;border:1px solid var(--line);border-radius:12px;margin:18px 0 22px}
+.comparison-table-wrap table{margin:0;min-width:680px}
+.comparison-table-wrap th:first-child,.comparison-table-wrap td:first-child{position:sticky;left:0;z-index:1}
+.comparison-table-wrap th:first-child{background:#202b30}
+.comparison-table-wrap td:first-child{background:#151c20}
+.finder-highlights{padding:11px 13px;margin:12px 0 14px;border:1px solid #3c4b50;border-radius:10px;background:#10191d;color:var(--accent2);font-size:12px;font-weight:750;line-height:1.5}
+@media(max-width:620px){
+ .product-buying-panel{padding:16px!important}
+ .product-brief-head{display:block}
+ .brief-chip{display:inline-block;margin-top:12px}
+ .brief-facts{grid-template-columns:1fr;gap:8px;margin:15px 0}
+ .brief-facts div{padding:10px 12px}
+ .comparison-intro{padding:15px}
+ .comparison-key{grid-template-columns:1fr}
+ .comparison-table-wrap table{min-width:650px}
+}
