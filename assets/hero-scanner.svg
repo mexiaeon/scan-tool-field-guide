@@ -7,7 +7,7 @@
  <filter id="shadow" x="-30%" y="-30%" width="160%" height="170%"><feGaussianBlur stdDeviation="18"/></filter>
 </defs>
 <ellipse cx="370" cy="492" rx="245" ry="28" fill="#000" opacity=".34" filter="url(#shadow)"/>
-<g transform="translate(92 30) rotate(-3 270 230)">
+<g transform="translate(50 18) scale(1.12)">
  <rect x="8" y="8" width="540" height="452" rx="36" fill="#07131a" opacity=".45"/>
  <rect x="0" y="0" width="540" height="452" rx="34" fill="url(#body)" stroke="#607987" stroke-width="3"/>
  <rect x="17" y="17" width="506" height="418" rx="23" fill="#0a1821" stroke="#718995" stroke-opacity=".38"/>
@@ -39,10 +39,5 @@
  </g>
  <rect x="248" y="460" width="44" height="7" rx="3.5" fill="#708590" opacity=".65"/>
 </g>
-<g transform="translate(510 390)">
- <rect width="142" height="78" rx="13" fill="#1c303b" stroke="#536d79" stroke-width="1.5"/>
- <path d="M18 25h23M18 35h48M18 45h35" stroke="#e9b66a" stroke-width="3" stroke-linecap="round"/>
- <circle cx="112" cy="27" r="13" fill="#254a45"/><path d="m106 27 4 4 8-9" fill="none" stroke="#9de0b9" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
- <text x="18" y="65" font-family="Arial,sans-serif" font-size="9" fill="#a8bbc2" letter-spacing="1">CLEAR. PRACTICAL. INFORMED.</text>
-</g>
+
 </svg>
