@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Scanner Finder | Find an OBD2 Scanner for Your Needs</title>
-<meta name="description" content="Answer a few questions about your vehicle, diagnostic needs and budget to get a starting shortlist of automotive scan tools. Always verify exact vehicle coverage.">
+<title>Automotive Scanner Finder | Match a Scan Tool to Your Vehicle & Budget</title>
+<meta name="description" content="Choose your vehicle, diagnostic task, device preference and budget to narrow down automotive scan tools. Compare suitable options and verify exact function-level compatibility before buying.">
 <link rel="canonical" href="https://mexiaeon.github.io/scan-tool-field-guide/scanner-finder.html">
 <meta property="og:type" content="website"><meta property="og:title" content="Scanner Finder | Scan Tool Field Guide"><meta property="og:description" content="Find a scanner shortlist based on your diagnostic job, budget and preferred device."><meta property="og:url" content="https://mexiaeon.github.io/scan-tool-field-guide/scanner-finder.html">
 <meta name="theme-color" content="#101417"><link rel="icon" href="assets/brand-mark.svg" type="image/svg+xml"><link rel="stylesheet" href="assets/site.css">
@@ -10,7 +10,7 @@
 </style></head><body>
 <div class="topbar"><div class="wrap topbar-inner"><span>Interactive buying helper</span><strong>Match the tool to the task</strong></div></div>
 <header class="header"><div class="wrap nav"><a class="brand" href="index.html"><img src="assets/brand-mark.svg" width="38" height="38" alt=""><span>SCAN TOOL<small>FIELD GUIDE</small></span></a><button class="menu-btn" aria-label="Open navigation" aria-expanded="false">☰</button><nav class="navlinks" aria-label="Main navigation"><a href="index.html">Home</a><a href="guides/index.html">Guides</a><a href="guides/best-obd2-scanners-under-300.html">Under $300 Picks</a><a href="guides/bidirectional-scan-tools.html">Bidirectional Tools</a><a href="guides/autel-vs-xtool-vs-topdon-comparison.html">Compare Scanners</a><a class="nav-cta" href="scanner-finder.html">Scanner Finder ↗</a></nav></div></header>
-<main><section class="article-hero"><div class="wrap"><div class="eyebrow">Scan Tool Field Guide · Buying helper</div><h1>Find a scanner that fits the job.</h1><p style="max-width:760px;color:var(--muted);font-size:17px">Tell us what vehicle you have, what you need to do and how much you want to spend. We'll suggest a sensible starting shortlist—not pretend to verify vehicle fitment.</p></div></section>
+<main><section class="article-hero"><div class="wrap"><div class="eyebrow">Scan Tool Field Guide · Buying helper</div><h1>Find the right scanner for your vehicle and the job.</h1><p style="max-width:760px;color:var(--muted);font-size:17px">Answer a few practical questions to narrow the field by vehicle, diagnostic task, budget and device type. You will get a shortlist with clear trade-offs—not a false compatibility guarantee.</p></div></section>
 <div class="wrap finder-wrap">
 <div class="finder-panel"><div class="kicker">Step 1 · Your vehicle</div><h2 style="font-size:27px">What are you working on?</h2><div class="finder-grid">
 <div class="finder-field"><label for="year">Model year</label><select id="year"><option value="">Choose year</option></select><span class="finder-help">Select the vehicle model year.</span></div>
@@ -18,15 +18,15 @@
 <div class="finder-field"><label for="model">Model</label><select id="model" disabled><option value="">Choose make first</option></select><input id="modelOther" type="text" placeholder="Enter model" hidden><span class="finder-help" id="modelHelp">Model suggestions appear after you choose a make. You can type any model.</span></div>
 <div class="finder-field"><label for="engine">Engine / trim (optional)</label><select id="engine"><option value="">Choose engine / trim (optional)</option><option>1.5L</option><option>1.8L</option><option>2.0L</option><option>2.4L</option><option>2.5L</option><option>3.0L</option><option>3.5L</option><option>3.6L</option><option>4.0L</option><option>5.0L</option><option>5.3L</option><option>5.7L</option><option>6.2L</option><option>Hybrid</option><option>Plug-in hybrid</option><option>Electric</option><option>Diesel</option><option value="other">Other / enter manually</option></select><input id="engineOther" type="text" placeholder="Enter exact engine / trim" hidden><span class="finder-help">Optional, but useful for checking exact coverage.</span></div>
 <div class="finder-field"><label for="market">Where was the vehicle originally sold new?</label><select id="market"><option>United States</option><option>Canada</option><option>Mexico</option><option>United Kingdom</option><option>European Union</option><option>Australia</option><option>Other / not sure</option></select><span class="finder-help">Coverage can differ by original sales market, not just where the vehicle was built.</span></div>
-</div><p class="finder-help">Vehicle details help frame your search. This tool does not query manufacturer coverage databases or guarantee compatibility.</p></div>
-<div class="finder-panel"><div class="kicker">Step 2 · What do you need?</div><h2 style="font-size:27px">Choose your main diagnostic task.</h2><div class="finder-grid">
-<div class="finder-field"><label for="task">Main job</label><select id="task"><option value="basic">Read / clear check-engine codes and view basic live data</option><option value="enhanced">Read ABS, airbag, transmission or other system codes</option><option value="active">Run bidirectional active tests / command components</option><option value="guided">Get guided DIY diagnostics and repair information</option><option value="fordgm">View enhanced data on a compatible Ford or GM</option></select></div>
-<div class="finder-field"><label for="budget">Budget range</label><select id="budget"><option value="100">Under $100</option><option value="300" selected>$100–$300</option><option value="600">$300–$600</option><option value="high">$600+</option><option value="flexible">Flexible — best fit matters most</option></select></div>
+</div><p class="finder-help">Your vehicle details help narrow the search. They are not sent to a manufacturer database, and this tool cannot confirm fitment.</p></div>
+<div class="finder-panel"><div class="kicker">Step 2 · Your diagnostic job</div><h2 style="font-size:27px">Choose your main diagnostic task.</h2><div class="finder-grid">
+<div class="finder-field"><label for="task">Main job</label><select id="task"><option value="basic">Read / clear check-engine codes and view basic live data</option><option value="enhanced">Read codes / live data from ABS, airbag, transmission or other modules</option><option value="active">Run bidirectional active tests / command components</option><option value="guided">Get enhanced code reports and guided DIY information</option><option value="fordgm">Access enhanced Ford / GM data and manufacturer-specific networks</option></select></div>
+<div class="finder-field"><label for="specificFunction">Specific function you need (optional)</label><input id="specificFunction" type="text" maxlength="120" placeholder="Example: ABS bleed, EPB reset, cooling-fan active test"><span class="finder-help">Name the exact reset, active test, module or procedure if you know it.</span></div><div class="finder-field"><label for="budget">Budget range</label><select id="budget"><option value="100">Under $100</option><option value="300" selected>$100–$300</option><option value="600">$300–$600</option><option value="high">$600+</option><option value="flexible">Flexible — best fit matters most</option></select></div>
 <div class="finder-field"><label for="device">Preferred device</label><select id="device"><option value="any">No preference</option><option value="handheld">Handheld scanner with its own screen</option><option value="phone">Bluetooth adapter that uses my phone / tablet</option></select></div>
 <div class="finder-field"><label for="experience">How will you use it?</label><select id="experience"><option value="diy">DIY owner / occasional troubleshooting</option><option value="advanced">Advanced DIY / frequent diagnostics</option><option value="shop">Professional / shop use</option></select></div>
-</div><div class="finder-actions"><button class="btn btn-primary" type="button" id="findBtn">Show my scanner shortlist ↗</button><button class="btn" type="reset" id="resetBtn">Reset answers</button></div></div>
-<section class="finder-panel finder-result" id="results" aria-live="polite" aria-atomic="true"><div class="kicker">Your starting shortlist</div><h2 style="font-size:29px" id="resultTitle">Recommended starting points</h2><p id="resultIntro"></p><div id="resultCards"></div><div class="priority-note" id="compatibilityNote"></div><p class="result-meta" id="vehicleSummary"></p><p><a href="guides/check-vehicle-compatibility.html">Read the vehicle compatibility checklist →</a></p></section>
-<div class="note"><strong>Important:</strong> This is an educational recommendation tool, not a fitment checker, diagnostic service or guarantee that a scanner supports a specific module or function. Before buying, confirm the exact year, make, model, engine, module and operation with the scanner manufacturer. Product prices, bundles and update terms can change.</div>
+</div><div class="finder-actions"><button class="btn btn-primary" type="button" id="findBtn">Find scanners that fit my needs ↗</button><button class="btn" type="reset" id="resetBtn">Reset answers</button></div></div>
+<section class="finder-panel finder-result" id="results" aria-live="polite" aria-atomic="true"><div class="kicker">Your personalized shortlist</div><h2 style="font-size:29px" id="resultTitle">Scanner options to research</h2><p id="resultIntro"></p><div id="resultCards"></div><div class="priority-note" id="compatibilityNote"></div><p class="result-meta" id="vehicleSummary"></p><p><a href="guides/check-vehicle-compatibility.html">Read the vehicle compatibility checklist →</a></p></section>
+<div class="note"><strong>Important:</strong> This is a shortlist tool, not a live compatibility checker. A scanner may support a vehicle but not the exact module or function you need. Confirm the exact year, make, model, engine, module and operation with the manufacturer before buying. Product prices, bundles and update terms can change.</div>
 </div></main>
 <footer class="footer"><div class="wrap"><div class="footer-grid"><div><a class="brand" href="index.html"><img src="assets/brand-mark.svg" width="38" height="38" alt=""><span>SCAN TOOL<small>FIELD GUIDE</small></span></a><p>Clear guidance for automotive diagnostic equipment, grounded in published specifications and practical compatibility checks.</p></div><div><h4>Related guides</h4><div class="footer-links"><a href="guides/best-obd2-scanners-under-300.html">Scanners under $300</a><a href="guides/bidirectional-scan-tools.html">Bidirectional scanner guide</a><a href="guides/autel-vs-xtool-vs-topdon-comparison.html">Brand comparison</a></div></div><div><h4>Site information</h4><div class="footer-links"><a href="about.html">About</a><a href="affiliate-disclosure.html">Affiliate disclosure</a><a href="privacy.html">Privacy policy</a></div></div></div><div class="footer-bottom"><span>© <span data-year>2026</span> Scan Tool Field Guide.</span><span>Research carefully. Diagnose responsibly.</span></div></div></footer>
 <script src="assets/site.js"></script>
@@ -44,64 +44,79 @@
  engineSelect.addEventListener("change",()=>showOther(engineSelect,$("engineOther")));
  for(let y=2026;y>=1980;y--){const o=document.createElement("option");o.value=String(y);o.textContent=String(y);$("year").appendChild(o);}
  const catalog={
-  xtool:{name:"XTOOL Anyscan A30M",tag:"Consider for bidirectional active tests",desc:"A phone/tablet-connected option to investigate when you need supported component commands and broader system diagnostics. Verify the exact model version and the active test you need for your vehicle.",url:"https://www.amazon.com/dp/B0FLJSZQHN?tag=smartfin0e6fa-20",guide:"guides/best-obd2-scanners-under-300.html"},
-  obdlink:{name:"OBDLink MX+",tag:"Enhanced data and app flexibility",desc:"A Bluetooth adapter to research if you want enhanced data and compatible apps, particularly for supported Ford and GM networks. It is not a standalone tablet or a general-purpose bidirectional scan tool.",url:"https://www.amazon.com/dp/B07JFRFJG6?tag=smartfin0e6fa-20",guide:"guides/best-obd2-scanners-under-300.html"},
-  blue:{name:"BlueDriver Bluetooth Pro",tag:"Guided DIY diagnostics",desc:"A phone-based reader with enhanced code coverage and repair reports on supported vehicles. Not intended for bidirectional active tests.",url:"https://www.amazon.com/dp/B00652G4TS?tag=smartfin0e6fa-20",guide:"guides/best-obd2-scanners-under-300.html"},
-  fox:{name:"FOXWELL NT301",tag:"Basic engine-code reading",desc:"A simple wired handheld reader with its own screen for check-engine diagnostics and basic live data. Not a full-system or bidirectional tool.",url:"https://www.amazon.com/dp/B00UJV3E12?tag=smartfin0e6fa-20",guide:"guides/best-obd2-scanners-under-300.html"},
-  topdon:{name:"TOPDON ArtiDiag900 Lite",tag:"Tablet-style full-system diagnostics",desc:"A tablet-style option with full-system diagnostic and bidirectional capabilities advertised by TOPDON. Confirm the exact function for your vehicle and check the current seller bundle.",url:"https://www.amazon.com/dp/B0C33Y285Y?tag=smartfin0e6fa-20",guide:"guides/autel-vs-xtool-vs-topdon-comparison.html"}
+  fox:{name:"FOXWELL NT301",tag:"Simple engine-code reader",device:"handheld",tier:1,tasks:["basic"],desc:"A straightforward wired reader for check-engine diagnostics and basic live data. It is not a full-system scanner and does not perform bidirectional active tests.",url:"https://www.amazon.com/dp/B00UJV3E12?tag=smartfin0e6fa-20",guide:"guides/best-obd2-scanners-under-300.html"},
+  blue:{name:"BlueDriver Bluetooth Pro",tag:"Phone-based enhanced DIY diagnostics",device:"phone",tier:2,tasks:["basic","enhanced","guided"],desc:"A Bluetooth tool with enhanced code information and repair reports on supported vehicles. It does not replace a tablet-style bidirectional scanner; check its vehicle-specific enhanced coverage.",url:"https://www.amazon.com/dp/B00652G4TS?tag=smartfin0e6fa-20",guide:"guides/best-obd2-scanners-under-300.html",coverage:"https://us.bluedriver.com/pages/compatibility"},
+  obdlink:{name:"OBDLink MX+",tag:"Enhanced data and app flexibility",device:"phone",tier:2,tasks:["basic","enhanced","fordgm"],desc:"A Bluetooth adapter for standard OBD-II data plus supported manufacturer-specific diagnostics. It is especially worth researching for compatible Ford and GM networks, but it is not a standalone tablet or universal active-test tool.",url:"https://www.amazon.com/dp/B07JFRFJG6?tag=smartfin0e6fa-20",guide:"guides/best-obd2-scanners-under-300.html",coverage:"https://support.obdlink.com/support/solutions/articles/43000705533-are-enhanced-diagnostics-available-for-my-vehicle-"},
+  a30m:{name:"XTOOL Anyscan A30M V2.0",tag:"Phone-connected bidirectional option",device:"phone",tier:2,tasks:["active","enhanced"],desc:"A phone-connected option to research if you want supported active tests and broader system diagnostics without a dedicated tablet. Confirm the exact active test and vehicle coverage before purchase.",url:"https://www.amazon.com/dp/B0FLJSZQHN?tag=smartfin0e6fa-20",guide:"guides/best-obd2-scanners-under-300.html"},
+  d7s:{name:"XTOOL D7S",tag:"Tablet-style diagnostics and 39+ advertised functions",device:"handheld",tier:3,tasks:["active","enhanced"],desc:"A dedicated diagnostic tablet that advertises bidirectional control and 39+ special functions. Check the exact D7S version, included update period and support for your specific operation.",url:"https://www.amazon.com/dp/B0BTBQ1NR4?tag=smartfin0e6fa-20",guide:"guides/xtool-d7s-review.html"},
+  topdon:{name:"TOPDON ArtiDiag900 Lite",tag:"Wireless tablet with full-system diagnostics",device:"handheld",tier:3,tasks:["active","enhanced"],desc:"A wireless tablet-style option with full-system diagnostics and supported bidirectional tests. Its listed service-function set is more limited than some higher-tier tools; verify the exact procedure and regional update terms.",url:"https://www.amazon.com/dp/B0C33Y285Y?tag=smartfin0e6fa-20",guide:"guides/topdon-artidiag900-lite-review.html"},
+  autel:{name:"Autel MaxiCOM MK900-BT",tag:"Higher-spec wireless diagnostic tablet",device:"handheld",tier:4,tasks:["active","enhanced"],desc:"A higher-spec tablet with wireless VCI and a broad published diagnostic feature set. The Amazon link opens a model-specific search, so confirm the exact MK900-BT bundle, MaxiVCI, update term and seller.",url:"https://www.amazon.com/s?k=Autel+MaxiCOM+MK900-BT&tag=smartfin0e6fa-20",guide:"guides/autel-maxicom-mk900-bt-review.html"}
  };
- function card(key){const p=catalog[key];return '<article class="result-card"><div class="result-tag">'+p.tag+'</div><h3>'+p.name+'</h3><p>'+p.desc+'</p><div class="result-links"><a href="'+p.url+'" target="_blank" rel="sponsored nofollow noopener">Check Amazon listing ↗</a><a href="'+p.guide+'">Read buying guide ↗</a></div></article>';}
- $('findBtn').addEventListener('click',()=>{
-  const task=$('task').value,budget=$('budget').value,device=$('device').value,experience=$('experience').value;
-  const year=$('year').value.trim(),make=$('make').value.trim(),model=$('model').value.trim(),engine=$('engine').value.trim(),market=$('market').value;
-  if(year&&(Number(year)<1980||Number(year)>2027)){alert('Choose a model year between 1980 and 2027.');return;}
-  const mk=make.toLowerCase(),isFord=mk==='ford',isGM=['chevrolet','gmc','buick','cadillac'].includes(mk),isTesla=mk==='tesla';
-  const older=year&&Number(year)<1996,evHint=/\b(ev|electric|hybrid|plug.?in|phev|bev)\b/i.test(model+' '+engine);
-  const profiles={
-   fox:{tasks:['basic'],devices:['handheld'],budgets:['100','300','600','high','flexible'],min:1,max:2,shops:false},
-   blue:{tasks:['basic','guided','enhanced'],devices:['phone'],budgets:['100','300','600','high','flexible'],min:1,max:2,shops:false},
-   obdlink:{tasks:['fordgm','basic'],devices:['phone'],budgets:['100','300','600','high','flexible'],min:1,max:2,shops:false,makeOnly:true},
-   xtool:{tasks:['active','enhanced'],devices:['phone','handheld'],budgets:['300','600','high','flexible'],min:2,max:3,shops:true},
-   topdon:{tasks:['active','enhanced'],devices:['handheld'],budgets:['600','high','flexible'],min:3,max:3,shops:true},
-   autel:{tasks:['active','enhanced'],devices:['handheld'],budgets:['600','high','flexible'],min:3,max:3,shops:true}
+ function card(key,reason){
+  const p=catalog[key];
+  const coverage=p.coverage?'<a href="'+p.coverage+'" target="_blank" rel="noopener">Check official coverage ↗</a>':'<a href="guides/check-vehicle-compatibility.html">How to verify coverage ↗</a>';
+  return '<article class="result-card" data-product="'+key+'"><div class="result-tag">'+p.tag+'</div><h3>'+p.name+'</h3><p>'+reason+'</p><p class="finder-help">'+p.desc+'</p><div class="result-links"><a href="'+p.url+'" target="_blank" rel="sponsored nofollow noopener">Check Amazon listing ↗</a><a href="'+p.guide+'">Read our guide ↗</a>'+coverage+'</div></article>';
+ }
+ $("findBtn").addEventListener("click",()=>{
+  const task=$("task").value,budget=$("budget").value,device=$("device").value,experience=$("experience").value;
+  const year=$("year").value.trim(),make=($("make").value==="other"?$("makeOther").value:$("make").value).trim(),model=($("model").value==="other"?$("modelOther").value:$("model").value).trim(),engine=($("engine").value==="other"?$("engineOther").value:$("engine").value).trim(),market=$("market").value,specific=$("specificFunction").value.trim();
+  const mk=make.toLowerCase(),isFord=mk==="ford",isGM=["chevrolet","gmc","buick","cadillac"].includes(mk),isTesla=mk==="tesla";
+  const older=year&&Number(year)<1996,evHint=/\b(ev|electric|hybrid|plug.?in|phev|bev)\b/i.test(model+" "+engine);
+  const maxTier=budget==="100"?1:budget==="300"?2:budget==="600"?3:4;
+  const eligible=Object.keys(catalog).filter(k=>{
+   const p=catalog[k];
+   if(!p.tasks.includes(task)||p.tier>maxTier)return false;
+   if(device!=="any"&&p.device!==device)return false;
+   if(task==="fordgm"&&k!=="obdlink"&&k!=="blue")return false;
+   return true;
+  });
+  const priority=k=>{
+   const p=catalog[k];let s=0;
+   if(task==="basic")s=({fox:7,blue:6,obdlink:5})[k]||0;
+   if(task==="enhanced")s=({blue:6,obdlink:7,a30m:5,d7s:6,topdon:6,autel:6})[k]||0;
+   if(task==="active")s=({a30m:8,d7s:8,topdon:7,autel:7})[k]||0;
+   if(task==="guided")s=({blue:9})[k]||0;
+   if(task==="fordgm")s=({obdlink:10,blue:5})[k]||0;
+   if(device==="handheld"&&p.device==="handheld")s+=3;
+   if(device==="phone"&&p.device==="phone")s+=3;
+   if(experience==="shop"&&["d7s","topdon","autel","a30m"].includes(k))s+=1;
+   if(experience==="diy"&&["fox","blue","obdlink"].includes(k))s+=1;
+   if((isFord||isGM)&&k==="obdlink")s+=2;
+   if(isTesla&&["fox","blue","obdlink"].includes(k))s-=2;
+   if(older&&["fox","blue","obdlink"].includes(k))s-=1;
+   return s;
   };
-  const score={fox:0,blue:0,obdlink:0,xtool:0,topdon:0};
-  Object.keys(profiles).forEach(k=>{const p=profiles[k];if(p.tasks.includes(task))score[k]+=5;if(p.devices.includes(device)||device==='any')score[k]+=3;if(p.budgets.includes(budget))score[k]+=3;if(experience==='shop'&&p.shops)score[k]+=3;if(experience==='diy'&&!p.shops)score[k]+=1;if(p.makeOnly&&!isFord&&!isGM)score[k]-=100;if((budget==='100'||budget==='300')&&p.min>=3)score[k]-=100;if((budget==='100')&&k==='xtool')score[k]-=3;});
-  if(task==='fordgm'){if(isFord||isGM)score.obdlink+=5;else score.obdlink-=100;}
-  if(task==='active'){score.xtool+=5;score.topdon+=2;score.fox-=100;score.blue-=100;score.obdlink-=100;}
-  if(task==='guided'){score.blue+=5;score.fox-=2;}
-  if(task==='basic'){score.fox+=2;score.blue+=2;}
-  if(device==='handheld'){score.fox+=2;score.xtool+=2;score.topdon+=2;score.autel+=2;score.blue-=5;score.obdlink-=5;}
-  if(device==='phone'){score.blue+=2;score.obdlink+=2;score.fox-=5;score.topdon-=5;}
-  if(isFord||isGM){score.obdlink+=2;}else{score.obdlink-=2;}
-  if(isTesla){score.fox-=2;score.blue-=2;score.obdlink-=2;}
-  if(older){score.fox-=2;score.blue-=2;score.obdlink-=2;}
-  const ranked=Object.keys(score).filter(k=>score[k]>0).sort((a,b)=>score[b]-score[a]);
-  let keys=ranked.slice(0,3);
-  if(!keys.length)keys=task==='active'?['xtool']:task==='fordgm'&&(isFord||isGM)?['obdlink']:task==='guided'?['blue']:['fox','blue'];
-  const reasons={
-   fox:'A straightforward handheld starting point for basic engine-code checks; it is not a full-system or active-test tool.',
-   blue:'A phone-based option for enhanced code information and guided DIY reports on supported vehicles; it does not perform bidirectional active tests.',
-   obdlink:(isFord||isGM)?'Your selected Ford/GM make makes this adapter relevant to investigate for supported enhanced data and compatible apps. Confirm exact model-year and app coverage.':'This adapter is most relevant to supported Ford/GM use, so it is not a strong match for the make entered.',
-   xtool:'A phone-connected option to investigate for supported full-system diagnostics and bidirectional active tests. Confirm the exact operation for your vehicle.',
-   topdon:'A handheld tablet-style option to investigate for broader system diagnostics and supported bidirectional tests. Verify exact vehicle coverage.',
-  };
-  $('resultTitle').textContent=task==='active'?'Best starting points for active tests':task==='fordgm'?'Enhanced-data options for your vehicle':task==='guided'?'Options for guided DIY diagnostics':task==='enhanced'?'Options for additional vehicle systems':'Options for basic OBD2 diagnostics';
-  $('resultIntro').textContent='Ranked using your selected diagnostic task, budget, preferred device, experience and vehicle make. This is a shortlist—not a verified fitment result.';
-  $('resultCards').innerHTML=keys.map(k=>{const p=catalog[k];return '<article class="result-card" data-product="'+k+'"><div class="result-tag">'+p.tag+'</div><h3>'+p.name+'</h3><p>'+reasons[k]+'</p><div class="result-links"><a href="'+p.url+'" target="_blank" rel="sponsored nofollow noopener">Check Amazon listing ↗</a><a href="'+p.guide+'">Read buying guide ↗</a></div><p class="finder-help">Confirm exact year, make, model, engine, system and requested function before ordering.</p></article>';}).join('');
-  let warnings=[];
-  if(older)warnings.push('This vehicle year may predate standard US OBD-II requirements. Confirm the connector and protocol before choosing a generic OBD-II scanner.');
-  if(isTesla)warnings.push('Tesla diagnostics use manufacturer-specific access and procedures. Do not assume a generic OBD-II scanner can access vehicle systems; confirm the exact adapter and software required.');
-  if(evHint)warnings.push('Your model/engine entry suggests an EV or hybrid. Confirm high-voltage battery, charging and manufacturer-specific system support separately; ordinary OBD-II coverage does not establish this.');
-  if(isFord||isGM)warnings.push('Enhanced Ford/GM data varies by model year, module and app. Confirm the exact PID, module and app support before purchase.');
-  if(make&&['BMW','Mercedes-Benz','Audi','Volkswagen','Porsche','Volvo','Jaguar','Land Rover'].includes(make))warnings.push('European makes can require brand-specific software, gateways or subscriptions. Confirm the exact module and service function for this model year.');
-  if(!year||!make||!model)warnings.push('Add the year, make and model for a more useful shortlist. Engine/trim can further narrow compatibility checks.');
-  warnings.push('Before buying, verify the exact year, make, model, engine, module and requested function with the scanner maker. Vehicle details in this tool do not connect to a live coverage database.');
-  if((budget==='100'||budget==='300')&&task==='active')warnings.push('Your budget may be too low for a reliable bidirectional tool. Do not substitute a basic code reader if active tests are essential.');
-  $('compatibilityNote').textContent=warnings.join(' ');
-  $('vehicleSummary').textContent='Vehicle entered: '+[year,make,model,engine].filter(Boolean).join(' ') + '. Original sales market: '+market+'. Use the vehicle details above when confirming compatibility before purchase. This site does not receive or store your vehicle details.';
-  $('results').classList.add('show');$('results').scrollIntoView({behavior:'smooth',block:'start'});
+  eligible.sort((a,b)=>priority(b)-priority(a));
+  const keys=eligible.slice(0,3);
+  const titles={basic:"Options for basic engine diagnostics",enhanced:"Options for broader system diagnostics",active:"Options for bidirectional active tests",guided:"Options for guided DIY diagnostics",fordgm:"Options for enhanced Ford / GM data"};
+  $("resultTitle").textContent=titles[task];
+  $("resultIntro").textContent="Shortlisted using your selected job, budget, device preference and vehicle details. These are products to research—not confirmed matches for your vehicle.";
+  if(!keys.length){
+   $("resultCards").innerHTML='<div class="coverage-box"><strong>No strong match within those filters</strong><p>Your selected task, budget and device preference do not line up with a product in our current shortlist. Increase the budget, choose “No preference,” or review the buying guides before choosing a cheaper tool that may not do the job.</p><a href="guides/bidirectional-scan-tools.html">Read the bidirectional scanner guide →</a></div>';
+  } else {
+   const reasons={fox:"A sensible low-cost starting point when your main need is basic check-engine diagnostics and you prefer a handheld screen.",blue:"A good candidate when you want phone-based enhanced code information and repair reports, with coverage confirmed for your vehicle.",obdlink:"A strong candidate to investigate for Ford/GM-specific networks and app-based enhanced data. Verify the exact make, model year and OEM add-on coverage.",a30m:"A compact phone-connected candidate for supported bidirectional tests when you want to stay in a lower budget tier.",d7s:"A tablet candidate when you want a larger feature set and dedicated hardware. Check the exact D7S revision and exact service function.",topdon:"A tablet candidate if wireless communication and its listed service functions match your repair tasks.",autel:"A higher-tier tablet candidate if you want the published hardware and feature set; verify the exact function and bundle."};
+   $("resultCards").innerHTML=keys.map(k=>card(k,reasons[k])).join("");
+  }
+  const warnings=[];
+  if(!year||!make||!model)warnings.push("For a useful compatibility check, fill in the exact model year, make and model. Engine/trim can narrow it further.");
+  if(older)warnings.push("This vehicle may predate standard U.S. OBD-II requirements. Confirm the connector and protocol before buying a generic OBD-II reader.");
+  if(isTesla)warnings.push("Tesla diagnostics use manufacturer-specific access and procedures. Do not assume a generic OBD-II scanner can access vehicle systems; confirm any required adapter and software.");
+  if(evHint)warnings.push("Your entry suggests an EV or hybrid. Confirm high-voltage battery, charging and manufacturer-specific system support separately; ordinary OBD-II compatibility does not establish this.");
+  if(isFord||isGM)warnings.push("Ford/GM enhanced data varies by model year, module and app. Check the exact OEM data coverage, not just the adapter's general OBD-II compatibility.");
+  if(["bmw","mercedes-benz","audi","volkswagen","porsche","volvo","jaguar","land rover"].includes(mk))warnings.push("Some European makes require brand-specific software, gateway access or subscriptions. Confirm the exact module and procedure for this model year.");
+  if(task==="active")warnings.push("A scanner that reads ABS or engine codes may still lack the active test you want. Confirm the exact command by vehicle and module.");
+  if(specific)warnings.push('You entered this specific job: "'+specific+'". Ask the manufacturer to confirm this exact operation on your vehicle.');
+  if(market!=="United States")warnings.push("You selected a vehicle originally sold outside the United States. U.S. product coverage and software may differ; verify regional compatibility before ordering from Amazon.com.");
+  warnings.push("This finder does not connect to live manufacturer databases and cannot guarantee compatibility. Use the official coverage checker or get written confirmation before purchase.");
+  $("compatibilityNote").textContent=warnings.join(" ");
+  $("vehicleSummary").textContent="Vehicle: "+[year,make,model,engine].filter(Boolean).join(" ")+" · Original sales market: "+market+" · Main job: "+$("task").selectedOptions[0].textContent+" · Budget: "+$("budget").selectedOptions[0].textContent+". Your answers stay in this page and are not submitted to a server.";
+  $("results").classList.add("show");$("results").scrollIntoView({behavior:"smooth",block:"start"});
  });
- $('resetBtn').addEventListener('click',()=>{['year','make','model','engine'].forEach(id=>$(id).value="");['makeOther','modelOther','engineOther'].forEach(id=>{$(id).value="";$(id).hidden=true;});modelSelect.disabled=true;modelSelect.innerHTML='<option value="">Choose make first</option>';$('task').value="basic";$('budget').value="300";$('device').value="any";$('experience').value="diy";$('results').classList.remove('show');});
+ $("resetBtn").addEventListener("click",()=>{
+  ["year","make","model","engine","specificFunction"].forEach(id=>$(id).value="");
+  ["makeOther","modelOther","engineOther"].forEach(id=>{$(id).value="";$(id).hidden=true;});
+  modelSelect.disabled=true;modelSelect.innerHTML='<option value="">Choose make first</option>';
+  $("task").value="basic";$("budget").value="300";$("device").value="any";$("experience").value="diy";$("market").value="United States";$("results").classList.remove("show");
+ });
 })();
 </script></body></html>
