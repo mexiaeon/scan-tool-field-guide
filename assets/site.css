@@ -19,3 +19,8 @@
  .hero-art{max-width:680px}
  .hero-art img{max-height:none}
 }
+
+/* Keep the homepage scanner perfectly level; no inherited tilt or rotation */
+.hero-art,.hero-art img{transform:none!important;rotate:none!important;perspective:none!important}
+.hero-art{display:flex;align-items:center;justify-content:center}
+.hero-art img{object-fit:contain;max-width:100%;height:auto}
