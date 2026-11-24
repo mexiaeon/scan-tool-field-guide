@@ -8,3 +8,14 @@
 .hero-art{padding:0;min-width:0}
 .hero-art img{display:block;width:100%;height:auto;max-height:470px;object-fit:contain;filter:drop-shadow(0 24px 32px rgba(0,0,0,.28))}
 @media(max-width:850px){.hero-art{max-width:600px;padding:0 8px}}
+
+/* Give the homepage scanner artwork enough room to read as the main visual */
+@media(min-width:851px){
+ .hero-grid{grid-template-columns:1fr 1fr;gap:28px}
+ .hero-art{width:108%;margin-left:-4%;padding:0}
+ .hero-art img{max-height:530px;width:100%;filter:drop-shadow(0 26px 34px rgba(0,0,0,.32))}
+}
+@media(max-width:850px){
+ .hero-art{max-width:680px}
+ .hero-art img{max-height:none}
+}
