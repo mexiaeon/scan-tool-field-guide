@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 560" role="img" aria-labelledby="title desc">
+<title id="title">Automotive diagnostic scan tool</title><desc id="desc">A professional handheld automotive diagnostic tablet showing a clean vehicle system overview.</desc>
+<defs>
+ <linearGradient id="body" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#344b59"/><stop offset="1" stop-color="#14232d"/></linearGradient>
+ <linearGradient id="screen" x1="0" y1="0" x2="0.9" y2="1"><stop stop-color="#122c3a"/><stop offset="1" stop-color="#091923"/></linearGradient>
+ <linearGradient id="glow" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#f4c77b"/><stop offset="1" stop-color="#d98d37"/></linearGradient>
+ <filter id="shadow" x="-30%" y="-30%" width="160%" height="170%"><feGaussianBlur stdDeviation="18"/></filter>
+</defs>
+
+<g transform="translate(50 18) scale(1.12)">
+ <rect x="8" y="8" width="540" height="452" rx="36" fill="#07131a" opacity=".45"/>
+ <rect x="0" y="0" width="540" height="452" rx="34" fill="url(#body)" stroke="#607987" stroke-width="3"/>
+ <rect x="17" y="17" width="506" height="418" rx="23" fill="#0a1821" stroke="#718995" stroke-opacity=".38"/>
+ <rect x="34" y="34" width="472" height="384" rx="14" fill="url(#screen)"/>
+ <path d="M49 50h442" stroke="#3b5663" stroke-width="1"/>
+ <circle cx="270" cy="25" r="3" fill="#92a8b1"/>
+ <g font-family="Arial,sans-serif">
+  <text x="58" y="76" fill="#f3f6f5" font-size="15" font-weight="700" letter-spacing="1.5">VEHICLE DIAGNOSTICS</text>
+  <rect x="398" y="56" width="82" height="27" rx="13" fill="#173d38" stroke="#3a7565"/>
+  <circle cx="412" cy="69.5" r="4" fill="#7dd0a2"/><text x="423" y="74" fill="#a9e2c2" font-size="10" font-weight="700">READY</text>
+  <text x="58" y="119" fill="#91a9b4" font-size="11" letter-spacing="1.2">SYSTEM OVERVIEW</text>
+  <text x="58" y="157" fill="#fff" font-size="25" font-weight="700">Scan your vehicle</text>
+  <text x="58" y="179" fill="#9bb0ba" font-size="12">View modules and diagnostic information</text>
+  <g transform="translate(58 205)">
+   <rect width="128" height="112" rx="11" fill="#172f3b" stroke="#355362"/>
+   <circle cx="26" cy="28" r="13" fill="#244858"/><path d="M20 28h12M26 22v12" stroke="#f0bd69" stroke-width="2" stroke-linecap="round"/>
+   <text x="17" y="66" fill="#fff" font-size="15" font-weight="700">ENGINE</text><text x="17" y="86" fill="#91aab5" font-size="10">Live data</text>
+   <rect x="143" width="128" height="112" rx="11" fill="#172f3b" stroke="#355362"/>
+   <circle cx="169" cy="28" r="13" fill="#244858"/><path d="M162 28h14M169 21v14" stroke="#f0bd69" stroke-width="2" stroke-linecap="round"/>
+   <text x="160" y="66" fill="#fff" font-size="15" font-weight="700">ABS</text><text x="160" y="86" fill="#91aab5" font-size="10">System status</text>
+   <rect x="286" width="128" height="112" rx="11" fill="#172f3b" stroke="#355362"/>
+   <circle cx="312" cy="28" r="13" fill="#244858"/><path d="M305 28h14M312 21v14" stroke="#f0bd69" stroke-width="2" stroke-linecap="round"/>
+   <text x="303" y="66" fill="#fff" font-size="15" font-weight="700">SRS</text><text x="303" y="86" fill="#91aab5" font-size="10">Airbag system</text>
+  </g>
+  <text x="58" y="351" fill="#91a9b4" font-size="10" letter-spacing="1.1">DIAGNOSTIC ACTIVITY</text>
+  <path d="M58 378h414" stroke="#28414e" stroke-width="1"/>
+  <path d="M58 390h245" stroke="url(#glow)" stroke-width="4" stroke-linecap="round"/>
+  <text x="470" y="395" fill="#9eb3bc" font-size="10" text-anchor="end">SCAN READY</text>
+ </g>
+ <rect x="248" y="460" width="44" height="7" rx="3.5" fill="#708590" opacity=".65"/>
+</g>
+
+</svg>
