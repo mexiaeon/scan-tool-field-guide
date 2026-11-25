@@ -12,3 +12,10 @@ https://mexiaeon.github.io/scan-tool-field-guide/guides/topdon-artidiag900-lite-
 https://mexiaeon.github.io/scan-tool-field-guide/guides/autel-vs-xtool-vs-topdon-comparison.html
 https://mexiaeon.github.io/scan-tool-field-guide/guides/best-obd2-scanners-under-300.html
 https://mexiaeon.github.io/scan-tool-field-guide/scanner-finder.html
+https://mexiaeon.github.io/scan-tool-field-guide/es/
+https://mexiaeon.github.io/scan-tool-field-guide/es/scanner-finder.html
+https://mexiaeon.github.io/scan-tool-field-guide/es/guias/autel-maxicom-mk900-bt-review.html
+https://mexiaeon.github.io/scan-tool-field-guide/es/guias/xtool-d7s-review.html
+https://mexiaeon.github.io/scan-tool-field-guide/es/guias/topdon-artidiag900-lite-review.html
+https://mexiaeon.github.io/scan-tool-field-guide/es/guias/autel-vs-xtool-vs-topdon-comparison.html
+https://mexiaeon.github.io/scan-tool-field-guide/es/guias/best-obd2-scanners-under-300.html
