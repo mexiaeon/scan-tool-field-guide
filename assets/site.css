@@ -265,3 +265,5 @@ button,input,select,textarea{max-width:100%;font:inherit}
 /* Amazon product-photo links across review pages and product cards */
 .amazon-photo-link{display:inline-block;margin:10px 0 0;color:var(--accent2);font-size:13px;font-weight:750;text-decoration:underline;text-underline-offset:3px}
 .amazon-photo-link:hover{color:#fff}
+
+.lang-switch{display:inline-flex!important;align-items:center;justify-content:center;padding:7px 11px;border:1px solid var(--accent);border-radius:9px;color:var(--accent2)!important;font-weight:800!important;white-space:nowrap}.navlinks .lang-switch:hover{background:rgba(228,163,75,.12);text-decoration:none}@media(max-width:980px){.navlinks .lang-switch{margin:4px 0}}
