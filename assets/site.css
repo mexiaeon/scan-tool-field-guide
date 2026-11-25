@@ -261,3 +261,7 @@ button,input,select,textarea{max-width:100%;font:inherit}
 /* Secondary Amazon product-photo links under recommendation buttons */
 .recommendation-card .amazon-photo-link{display:inline-block;margin-top:10px;color:var(--accent2);font-size:13px;font-weight:750;text-decoration:underline;text-underline-offset:3px}
 .recommendation-card .amazon-photo-link:hover{color:#fff}
+
+/* Amazon product-photo links across review pages and product cards */
+.amazon-photo-link{display:inline-block;margin:10px 0 0;color:var(--accent2);font-size:13px;font-weight:750;text-decoration:underline;text-underline-offset:3px}
+.amazon-photo-link:hover{color:#fff}
