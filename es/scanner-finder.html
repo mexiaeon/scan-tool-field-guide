@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="es-US"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Buscador de escáneres automotrices</title>
+<meta name="description" content="Encuentra un escáner según tu vehículo, tarea de diagnóstico, dispositivo y presupuesto. Compara opciones y verifica la compatibilidad exacta.">
+<link rel="canonical" href="https://mexiaeon.github.io/scan-tool-field-guide/es/scanner-finder.html">
+<meta property="og:type" content="website"><meta property="og:title" content="Buscador de escáneres | Scan Tool Field Guide"><meta property="og:description" content="Encuentra opciones según tu tarea de diagnóstico, presupuesto y dispositivo preferido."><meta property="og:url" content="https://mexiaeon.github.io/scan-tool-field-guide/es/scanner-finder.html">
+<meta name="theme-color" content="#101417"><link rel="icon" href="../assets/brand-mark.svg" type="image/svg+xml"><link rel="stylesheet" href="../assets/site.css">
+<style>
+.finder-wrap{max-width:900px;margin:0 auto;padding:36px 0 76px}.finder-panel{background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:clamp(18px,4vw,32px);margin:20px 0}.finder-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}.finder-field{display:grid;gap:8px;min-width:0}.finder-grid{min-width:0}.finder-field [hidden]{display:none!important}.finder-field select{color-scheme:dark}.finder-field label,.finder-label{font-weight:750;color:#f3f5f4;font-size:14px}.finder-field input,.finder-field select{display:block;width:100%;min-width:0;max-width:100%;background:#0f1518;color:#f3f5f4;border:1px solid #3a484e;border-radius:10px;padding:13px;font:inherit;min-height:48px}.finder-field input:focus,.finder-field select:focus{outline:2px solid var(--accent);outline-offset:2px}.finder-help{font-size:12px;color:var(--muted)}.finder-actions{display:flex;gap:12px;align-items:center;flex-wrap:wrap;margin-top:22px}.finder-result{display:none}.finder-result.show{display:block}.result-card{border:1px solid var(--line);background:#141c20;border-radius:14px;padding:20px;margin:14px 0}.result-card h3{margin:0 0 8px}.result-tag{color:var(--accent2);font-size:11px;letter-spacing:.1em;text-transform:uppercase;font-weight:850}.result-card p{color:#bdc8c9;margin:8px 0 14px}.result-card .result-links{display:flex;gap:14px;flex-wrap:wrap;font-size:13px;font-weight:750}.coverage-box{background:#10191d;border:1px solid #34464c;border-radius:11px;padding:14px;margin:14px 0}.coverage-box strong{display:block;color:#f5d27a;margin-bottom:6px}.coverage-box p{font-size:13px;margin:6px 0 10px}.coverage-box a{color:#f5d27a;font-weight:800}.purchase-gate{display:flex;gap:10px;align-items:flex-start;margin-top:13px;font-size:12px;color:#c5d0d1}.purchase-gate input{margin-top:3px;accent-color:#e9b83d}.amazon-locked,.amazon-ready{display:inline-block;margin-top:12px;padding:10px 14px;border-radius:9px;font-size:13px;font-weight:850}.amazon-locked{background:#303a3e;color:#9da9aa}.amazon-ready{background:#f0c34d;color:#171a1b;text-decoration:none}.priority-note{border-left:3px solid var(--accent);padding:14px 16px;background:#211d16;border-radius:0 10px 10px 0;color:#d6c7ac;font-size:13px;margin:16px 0}.result-meta{font-size:12px;color:var(--muted)}.finder-progress{height:5px;background:#293439;border-radius:9px;overflow:hidden;margin:18px 0 24px}.finder-progress span{display:block;height:100%;width:100%;background:var(--accent)}@media(max-width:620px){.finder-grid{grid-template-columns:1fr}.finder-wrap{padding-top:24px}.finder-panel{padding:18px}}
+
+/* Clearer product recommendation hierarchy and Amazon purchase actions */
+.result-card{padding:22px;box-shadow:0 8px 22px rgba(0,0,0,.14)}
+.result-card .result-tag{line-height:1.5}
+.result-card .result-links{align-items:center;gap:12px 18px}
+.result-card .result-links .amazon-result-link{display:inline-flex;align-items:center;justify-content:center;background:#f0c34d;color:#171a1b;padding:12px 17px;border-radius:9px;font-weight:900;text-decoration:none;min-height:44px}
+.result-card .result-links .amazon-result-link:hover{background:#ffda70}
+.result-card .result-meta{margin-top:12px}
+@media(max-width:620px){.result-card{padding:17px}.result-card .result-links{display:grid;grid-template-columns:1fr;gap:12px}.result-card .result-links a{width:100%;box-sizing:border-box}.result-card .result-links .amazon-result-link{text-align:center}}
+</style><script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://mexiaeon.github.io/scan-tool-field-guide/es/es/scanner-finder.html#webpage",
+      "url": "https://mexiaeon.github.io/scan-tool-field-guide/es/scanner-finder.html",
+      "name": "Buscador de escáneres automotrices",
+      "description": "Encuentra un escáner según tu vehículo, tarea de diagnóstico, dispositivo y presupuesto. Compara opciones y verifica la compatibilidad exacta.",
+      "isPartOf": {"@id": "https://mexiaeon.github.io/scan-tool-field-guide/#website"},
+      "about": {"@id": "https://mexiaeon.github.io/scan-tool-field-guide/#organization"},
+      "inLanguage": "es-US",
+      "breadcrumb": {"@id": "https://mexiaeon.github.io/scan-tool-field-guide/es/scanner-finder.html#breadcrumb"}
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://mexiaeon.github.io/scan-tool-field-guide/es/scanner-finder.html#breadcrumb",
+      "itemListElement": [
+        {"@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://mexiaeon.github.io/scan-tool-field-guide/"},
+        {"@type": "ListItem", "position": 2, "name": "Buscador de escáneres", "item": "https://mexiaeon.github.io/scan-tool-field-guide/es/scanner-finder.html"}
+      ]
+    }
+  ]
+}
+</script>
+</head><body>
+<div class="topbar"><div class="wrap topbar-inner"><span>Asistente interactivo de compra</span><strong>Elige el equipo según tu necesidad</strong></div></div>
+<header class="header"><div class="wrap nav"><a class="brand" href="index.html"><img src="../assets/brand-mark.svg" width="38" height="38" alt=""><span>SCAN TOOL<small>FIELD GUIDE</small></span></a><button class="menu-btn" aria-label="Abrir navegación" aria-expanded="false">☰</button><nav class="navlinks" aria-label="Navegación principal"><a href="index.html">Inicio</a><a href="guias/best-obd2-scanners-under-300.html">Guías</a><a href="guias/best-obd2-scanners-under-300.html">Opciones por menos de $300</a><a href="guias/autel-vs-xtool-vs-topdon-comparison.html">Escáneres bidireccionales</a><a href="guias/autel-vs-xtool-vs-topdon-comparison.html">Comparar escáneres</a><a class="nav-cta" href="scanner-finder.html">Buscador de escáneres ↗</a><a class="lang-switch" href="../scanner-finder.html">English</a></nav></div></header>
+<main><section class="article-hero"><div class="wrap"><div class="eyebrow">Scan Tool Field Guide · Buying helper</div><h1>Encuentra el escáner adecuado para tu vehículo y tu trabajo.</h1><p style="max-width:760px;color:var(--muted);font-size:17px">Responde unas preguntas para reducir las opciones según tu vehículo, tarea de diagnóstico, presupuesto y tipo de dispositivo. Recibirás una lista breve con ventajas y limitaciones, no una garantía falsa de compatibilidad.</p></div></section>
+<div class="wrap finder-wrap">
+<div class="callout finder-trust"><strong>Cómo se generan estas recomendaciones:</strong> Comparamos la tarea, presupuesto y dispositivo que elegiste con la información publicada de cada producto. Esta lista es una investigación, no una prueba física ni una consulta en vivo al fabricante. Verifica el vehículo, módulo y función exactos antes de comprar. <a href="guias/best-obd2-scanners-under-300.html">Consulta la guía de compatibilidad</a> · <a href="../about.html">Conoce nuestra metodología</a> · <a href="../affiliate-disclosure.html">Divulgación de afiliados</a>.</div>
+<div class="finder-panel"><div class="kicker">Paso 1 · Tu vehículo</div><h2 style="font-size:27px">¿En qué vehículo trabajarás?</h2><div class="finder-grid">
+<div class="finder-field"><label for="year">Año del modelo</label><select id="year"><option value="">Elige el año</option></select><span class="finder-help">Selecciona el año del modelo del vehículo.</span></div>
+<div class="finder-field"><label for="make">Marca</label><select id="make"><option value="">Elige la marca</option></select><input id="makeOther" type="text" placeholder="Escribe la marca" hidden><span class="finder-help">Elige una marca o selecciona “Otra”.</span></div>
+<div class="finder-field"><label for="model">Modelo</label><select id="model" disabled><option value="">Elige la marca first</option></select><input id="modelOther" type="text" placeholder="Escribe el modelo" hidden><span class="finder-help" id="modelHelp">Modelo suggestions appear after you choose a make. You can type any model.</span></div>
+<div class="finder-field"><label for="engine">Motor / versión (opcional)</label><select id="engine"><option value="">Elige motor / versión (opcional)</option><option>1.5L</option><option>1.8L</option><option>2.0L</option><option>2.4L</option><option>2.5L</option><option>3.0L</option><option>3.5L</option><option>3.6L</option><option>4.0L</option><option>5.0L</option><option>5.3L</option><option>5.7L</option><option>6.2L</option><option>Hybrid</option><option>Plug-in hybrid</option><option>Electric</option><option>Diesel</option><option value="other">Otro / escribir manualmente</option></select><input id="engineOther" type="text" placeholder="Escribe el motor o versión exactos" hidden><span class="finder-help">Es opcional, pero ayuda a verificar la cobertura exacta.</span></div>
+<div class="finder-field"><label for="market">¿En qué mercado se vendió originalmente el vehículo nuevo?</label><select id="market"><option>Estados Unidos</option><option>Canadá</option><option>México</option><option>Reino Unido</option><option>Unión Europea</option><option>Australia</option><option>Otro / no estoy seguro</option></select><span class="finder-help">La cobertura puede variar según el mercado original de venta, no solo el país de fabricación.</span></div>
+</div><p class="finder-help">Los datos de tu vehículo ayudan a filtrar opciones. No se envían a una base de datos del fabricante y esta herramienta no puede confirmar compatibilidad.</p></div>
+<div class="finder-panel"><div class="kicker">Paso 2 · Tu tarea de diagnóstico</div><h2 style="font-size:27px">Elige tu tarea principal de diagnóstico.</h2><div class="finder-grid">
+<div class="finder-field"><label for="task">Trabajo principal</label><select id="task"><option value="basic">Leer / borrar códigos de motor y consultar datos básicos en vivo</option><option value="enhanced">Leer códigos / datos en vivo de ABS, bolsas de aire, transmisión u otros módulos</option><option value="active">Ejecutar pruebas activas bidireccionales / activar componentes</option><option value="guided">Obtener informes ampliados de códigos y orientación DIY</option><option value="fordgm">Acceder a datos ampliados de Ford / GM y redes específicas del fabricante</option></select></div>
+<div class="finder-field"><label for="specificFunction">Función específica que necesitas (opcional)</label><input id="specificFunction" type="text" maxlength="120" placeholder="Ejemplo: purga ABS, reinicio EPB, prueba activa del ventilador"><span class="finder-help">Escribe el reinicio, prueba activa, módulo o procedimiento exacto si lo conoces.</span></div><div class="finder-field"><label for="budget">Presupuesto</label><select id="budget"><option value="100">Menos de $100</option><option value="300" selected>$100–$300</option><option value="600">$300–$600</option><option value="high">$600+</option><option value="flexible">Flexible — best fit matters most</option></select></div>
+<div class="finder-field"><label for="device">Dispositivo preferido</label><select id="device"><option value="any">Sin preferencia</option><option value="handheld">Escáner portátil con pantalla propia</option><option value="phone">Adaptador Bluetooth para teléfono o tableta</option></select></div>
+<div class="finder-field"><label for="experience">¿Cómo lo utilizarás?</label><select id="experience"><option value="diy">Propietario DIY / diagnóstico ocasional</option><option value="advanced">DIY avanzado / diagnósticos frecuentes</option><option value="shop">Uso profesional / taller</option></select></div>
+</div><div class="finder-actions"><button class="btn btn-primary" type="button" id="findBtn">Buscar escáneres para mis necesidades ↗</button><button class="btn" type="reset" id="resetBtn">Borrar respuestas</button></div></div>
+<section class="finder-panel finder-result" id="results" aria-live="polite" aria-atomic="true"><div class="kicker">Tu lista personalizada</div><h2 style="font-size:29px" id="resultTitle">Opciones de escáner para investigar</h2><p id="resultIntro"></p><div id="resultCards"></div><div class="priority-note" id="compatibilityNote"></div><p class="result-meta" id="vehicleSummary"></p><p><a href="guias/best-obd2-scanners-under-300.html">Read the vehicle compatibility checklist →</a></p></section>
+<div class="note"><strong>Importante:</strong> Esta herramienta crea una lista de opciones; no verifica compatibilidad en vivo. Un escáner puede ser compatible con un vehículo, pero no con el módulo o función exactos que necesitas. Confirma año, marca, modelo, motor, módulo y operación con el fabricante antes de comprar. Los precios, paquetes y condiciones de actualización pueden cambiar.</div>
+</div></main>
+<footer class="footer"><div class="wrap"><div class="footer-grid"><div><a class="brand" href="index.html"><img src="../assets/brand-mark.svg" width="38" height="38" alt=""><span>SCAN TOOL<small>FIELD GUIDE</small></span></a><p>Información clara sobre equipos de diagnóstico automotriz, basada en especificaciones publicadas y verificaciones prácticas de compatibilidad.</p></div><div><h4>Guías relacionadas</h4><div class="footer-links"><a href="guias/best-obd2-scanners-under-300.html">Escáneres por menos de $300</a><a href="guias/autel-vs-xtool-vs-topdon-comparison.html">Guía de escáneres bidireccionales</a><a href="guias/autel-vs-xtool-vs-topdon-comparison.html">Comparación de marcas</a></div></div><div><h4>Información del sitio</h4><div class="footer-links"><a href="../about.html">Acerca de</a><a href="../affiliate-disclosure.html">Divulgación de afiliados</a><a href="../privacy.html">Política de privacidad</a></div></div></div><div class="footer-bottom"><span>© <span data-year>2026</span> Scan Tool Field Guide.</span><span>Investiga con cuidado. Diagnostica responsablemente.</span></div></div></footer>
+<script src="../assets/site.js"></script>
+<script>
+(() => {
+ const $=id=>document.getElementById(id);
+ const makes=["Acura","Alfa Romeo","Audi","BMW","Buick","Cadillac","Chevrolet","Chrysler","Dodge","Fiat","Ford","Genesis","GMC","Honda","Hyundai","Infiniti","Jaguar","Jeep","Kia","Land Rover","Lexus","Lincoln","Mazda","Mercedes-Benz","Mini","Mitsubishi","Nissan","Porsche","Ram","Rivian","Subaru","Tesla","Toyota","Volkswagen","Volvo","Otro / escribir manualmente"];
+ const models={"Ford":"Bronco,Edge,Escape,Expedition,Explorer,F-150,F-250,F-350,Maverick,Mustang,Ranger,Transit","Chevrolet":"Blazer,Camaro,Colorado,Corvette,Equinox,Malibu,Silverado,Suburban,Tahoe,Traverse,Trax","Toyota":"4Runner,Camry,Corolla,Highlander,Land Cruiser,Prius,RAV4,Sequoia,Sienna,Tacoma,Tundra","Honda":"Accord,Civic,CR-V,HR-V,Odyssey,Passport,Pilot,Ridgeline","Nissan":"Altima,Armada,Frontier,Kicks,Maxima,Murano,Pathfinder,Rogue,Sentra,Titan,Versa","Jeep":"Cherokee,Compass,Gladiator,Grand Cherokee,Renegade,Wrangler","Ram":"1500,2500,3500,ProMaster","GMC":"Acadia,Canyon,Savana,Sierra,Terrain,Yukon","Hyundai":"Elantra,Kona,Palisade,Santa Cruz,Santa Fe,Sonata,Tucson,Venue","Kia":"Carnival,EV6,Forte,K5,Seltos,Sorento,Soul,Sportage,Telluride","Subaru":"Ascent,BRZ,Crosstrek,Forester,Impreza,Legacy,Outback,WRX","BMW":"2 Series,3 Series,4 Series,5 Series,7 Series,X1,X3,X5,X7","Mercedes-Benz":"A-Class,C-Class,CLA,E-Class,GLA,GLB,GLC,GLE,GLS,S-Class","Volkswagen":"Atlas,Golf,ID.4,Jetta,Passat,Tiguan","Mazda":"CX-3,CX-30,CX-5,CX-50,CX-9,CX-90,Mazda3,Mazda6","Lexus":"ES,GX,IS,LX,NX,RX,TX,UX","Audi":"A3,A4,A5,A6,Q3,Q5,Q7,Q8","Tesla":"Modelo 3,Modelo S,Modelo X,Modelo Y","Dodge":"Challenger,Charger,Durango,Hornet","Buick":"Enclave,Encore,Envision,LaCrosse,Regal","Cadillac":"CT4,CT5,Escalade,XT4,XT5,XT6","Chrysler":"300,Pacifica,Voyager","Acura":"Integra,MDX,RDX,TLX","Infiniti":"Q50,QX50,QX55,QX60,QX80","Lincoln":"Aviator,Corsair,Navigator,Nautilus","Mitsubishi":"Eclipse Cross,Mirage,Outlander,Outlander Sport","Porsche":"911,Cayenne,Macan,Panamera,Taycan","Volvo":"S60,S90,XC40,XC60,XC90"};
+ const makeSelect=$("make"),modelSelect=$("model"),engineSelect=$("engine");
+ makes.forEach(v=>{const o=document.createElement("option");o.value=v==="Otro / escribir manualmente"?"other":v;o.textContent=v;makeSelect.appendChild(o);});
+ function showOther(select,input){input.hidden=select.value!=="other";if(select.value!=="other")input.value="";}
+ function loadModelos(){const make=makeSelect.value;modelSelect.innerHTML='<option value="">Elige el modelo</option>';(models[make]||"").split(",").filter(Boolean).forEach(v=>{const o=document.createElement("option");o.value=v;o.textContent=v;modelSelect.appendChild(o);});const other=document.createElement("option");other.value="other";other.textContent="Otro / escribir manualmente";modelSelect.appendChild(other);modelSelect.disabled=!make;$("modelHelp").textContent=models[make]?"Elige un modelo o selecciona “Otro” para escribirlo.":"Elige una marca y luego selecciona “Otro” para escribir el modelo.";showOther(modelSelect,$("modelOther"));}
+ makeSelect.addEventListener("change",()=>{showOther(makeSelect,$("makeOther"));loadModelos();});
+ modelSelect.addEventListener("change",()=>showOther(modelSelect,$("modelOther")));
+ engineSelect.addEventListener("change",()=>showOther(engineSelect,$("engineOther")));
+ for(let y=2026;y>=1980;y--){const o=document.createElement("option");o.value=String(y);o.textContent=String(y);$("year").appendChild(o);}
+ const catalog={
+  fox:{name:"FOXWELL NT301",highlight:"Códigos OBD-II básicos · Diagnóstico de motor · Equipo portátil con cable",tag:"Lector sencillo de códigos de motor",device:"handheld",tier:1,tasks:["basic"],desc:"Lector con cable para diagnóstico de motor y datos básicos en vivo. No es un escáner de todos los sistemas ni realiza pruebas activas bidireccionales.",url:"https://www.amazon.com/dp/B00UJV3E12?tag=smartfin0e6fa-20",guide:"guias/best-obd2-scanners-under-300.html"},
+  blue:{name:"BlueDriver Bluetooth Pro",highlight:"Adaptador Bluetooth · Informes ampliados de códigos · Vehículos compatibles",tag:"Diagnóstico DIY ampliado desde el teléfono",device:"phone",tier:2,tasks:["basic","enhanced","guided"],desc:"Herramienta Bluetooth con información ampliada de códigos e informes de reparación para vehículos compatibles. No sustituye una tableta bidireccional; verifica la cobertura ampliada para tu vehículo.",url:"https://www.amazon.com/dp/B00652G4TS?tag=smartfin0e6fa-20",guide:"guias/best-obd2-scanners-under-300.html"},
+  obdlink:{name:"OBDLink MX+",highlight:"Adaptador Bluetooth · Datos ampliados · La cobertura Ford / GM varía",tag:"Datos ampliados y flexibilidad de aplicaciones",device:"phone",tier:2,tasks:["basic","enhanced","fordgm"],desc:"Adaptador Bluetooth para datos OBD-II estándar y diagnósticos específicos del fabricante compatibles. Vale la pena investigarlo para redes Ford y GM compatibles, pero no es una tableta independiente ni una herramienta universal de pruebas activas.",url:"https://www.amazon.com/dp/B07JFRFJG6?tag=smartfin0e6fa-20",guide:"guias/best-obd2-scanners-under-300.html"},
+  a30m:{name:"XTOOL Anyscan A30M V2.0",highlight:"Herramienta conectada al teléfono · Pruebas activas compatibles · La cobertura varía",tag:"Opción bidireccional conectada al teléfono",device:"phone",tier:2,tasks:["active","enhanced"],desc:"Opción conectada al teléfono para investigar si buscas pruebas activas compatibles y diagnóstico de más sistemas sin una tableta dedicada. Confirma la prueba activa exacta y la cobertura del vehículo antes de comprar.",url:"https://www.amazon.com/dp/B0FLJSZQHN?tag=smartfin0e6fa-20",guide:"guias/best-obd2-scanners-under-300.html"},
+  d7s:{name:"XTOOL D7S",highlight:"Tableta dedicada · Más de 39 funciones de servicio anunciadas · VCI con cable",tag:"Diagnóstico tipo tableta y más de 39 funciones anunciadas",device:"handheld",tier:3,tasks:["active","enhanced"],desc:"Tableta de diagnóstico que anuncia control bidireccional y más de 39 funciones especiales. Verifica la versión exacta del D7S, el período de actualizaciones incluido y la compatibilidad con la operación que necesitas.",url:"https://www.amazon.com/dp/B0BTBQ1NR4?tag=smartfin0e6fa-20",guide:"guias/xtool-d7s-review.html"},
+  topdon:{name:"TOPDON ArtiDiag900 Lite",highlight:"Tableta inalámbrica de 8 pulgadas · 8 funciones de servicio indicadas · Pruebas bidireccionales",tag:"Tableta inalámbrica con diagnóstico de todos los sistemas",device:"handheld",tier:3,tasks:["active","enhanced"],desc:"Opción tipo tableta inalámbrica con diagnóstico de todos los sistemas y pruebas bidireccionales compatibles. Su lista de funciones de servicio es más limitada que la de algunas herramientas superiores; verifica el procedimiento exacto y las condiciones regionales de actualización.",url:"https://www.amazon.com/dp/B0C33Y285Y?tag=smartfin0e6fa-20",guide:"guias/topdon-artidiag900-lite-review.html"},
+  autel:{name:"Autel MaxiCOM MK900-BT",highlight:"Tableta inalámbrica de 8 pulgadas · 4 GB RAM / 64 GB de almacenamiento · CAN FD / DoIP",tag:"Tableta inalámbrica de diagnóstico con especificaciones superiores",device:"handheld",tier:4,tasks:["active","enhanced"],desc:"Tableta de especificaciones superiores con VCI inalámbrico y un amplio conjunto de funciones de diagnóstico publicadas. El enlace de Amazon abre una búsqueda del modelo; confirma el paquete MK900-BT, MaxiVCI, período de actualización y vendedor.",url:"https://www.amazon.com/s?k=Autel+MaxiCOM+MK900-BT&tag=smartfin0e6fa-20",guide:"guias/autel-maxicom-mk900-bt-review.html"}
+ };
+ function card(key,reason,index){
+  const p=catalog[key];
+  const coverage='<a href="guias/best-obd2-scanners-under-300.html">Verifica la cobertura exacta de tu vehículo ↗</a>';
+  const rank=index===0?'Mejor opción según tus filtros':'Alternativa para comparar';
+  return '<article class="result-card" data-product="'+key+'"><div class="result-tag">'+rank+' · '+p.tag+'</div><h3>'+p.name+'</h3><p>'+reason+'</p><div class="finder-highlights"><span>'+p.highlight+'</span></div><p class="finder-help">'+p.desc+'</p><div class="result-links"><a class="amazon-result-link" href="'+p.url+'" target="_blank" rel="sponsored nofollow noopener">Ver en Amazon ↗</a><a href="'+p.guide+'">Leer nuestra guía ↗</a>'+coverage+'</div><p class="result-meta">La publicación de Amazon puede variar según vendedor, paquete y precio. Confirma el modelo exacto antes de pagar.</p></article>';
+ }
+ $("findBtn").addEventListener("click",()=>{
+  const task=$("task").value,budget=$("budget").value,device=$("device").value,experience=$("experience").value;
+  const year=$("year").value.trim(),make=($("make").value==="other"?$("makeOther").value:$("make").value).trim(),model=($("model").value==="other"?$("modelOther").value:$("model").value).trim(),engine=($("engine").value==="other"?$("engineOther").value:$("engine").value).trim(),market=$("market").value,specific=$("specificFunction").value.trim();
+  const mk=make.toLowerCase(),isFord=mk==="ford",isGM=["chevrolet","gmc","buick","cadillac"].includes(mk),isTesla=mk==="tesla";
+  const older=year&&Number(year)<1996,evHint=/\b(ev|electric|hybrid|plug.?in|phev|bev)\b/i.test(model+" "+engine);
+  const maxTier=budget==="100"?1:budget==="300"?2:budget==="600"?3:4;
+  const eligible=Object.keys(catalog).filter(k=>{
+   const p=catalog[k];
+   if(!p.tasks.includes(task)||p.tier>maxTier)return false;
+   if(device!=="any"&&p.device!==device)return false;
+   if(task==="fordgm"&&k!=="obdlink"&&k!=="blue")return false;
+   return true;
+  });
+  const priority=k=>{
+   const p=catalog[k];let s=0;
+   if(task==="basic")s=({fox:7,blue:6,obdlink:5})[k]||0;
+   if(task==="enhanced")s=({blue:6,obdlink:7,a30m:5,d7s:6,topdon:6,autel:6})[k]||0;
+   if(task==="active")s=({a30m:8,d7s:8,topdon:7,autel:7})[k]||0;
+   if(task==="guided")s=({blue:9})[k]||0;
+   if(task==="fordgm")s=({obdlink:10,blue:5})[k]||0;
+   if(device==="handheld"&&p.device==="handheld")s+=3;
+   if(device==="phone"&&p.device==="phone")s+=3;
+   if(experience==="shop"&&["d7s","topdon","autel","a30m"].includes(k))s+=1;
+   if(experience==="diy"&&["fox","blue","obdlink"].includes(k))s+=1;
+   if((isFord||isGM)&&k==="obdlink")s+=2;
+   if(isTesla&&["fox","blue","obdlink"].includes(k))s-=2;
+   if(older&&["fox","blue","obdlink"].includes(k))s-=1;
+   return s;
+  };
+  eligible.sort((a,b)=>priority(b)-priority(a));
+  const keys=eligible.slice(0,3);
+  const titles={basic:"Opciones para diagnóstico básico del motor",enhanced:"Opciones para diagnóstico de más sistemas",active:"Opciones para pruebas activas bidireccionales",guided:"Opciones para diagnóstico DIY guiado",fordgm:"Opciones para datos ampliados Ford / GM"};
+  $("resultTitle").textContent=titles[task];
+  $("resultIntro").textContent="Lista creada según la tarea, presupuesto, dispositivo y datos del vehículo que seleccionaste. Son productos para investigar, no compatibilidades confirmadas para tu vehículo.";
+  if(!keys.length){
+   $("resultCards").innerHTML='<div class="coverage-box"><strong>No encontramos una opción adecuada con esos filtros</strong><p>Your selected task, budget and device preference do not line up with a product in our current shortlist. Increase the budget, choose “Sin preferencia,” or review the buying guides before choosing a cheaper tool that may not do the job.</p><a href="guias/autel-vs-xtool-vs-topdon-comparison.html">Lee la comparación de escáneres bidireccionales →</a></div>';
+  } else {
+   const reasons={fox:"Una opción económica razonable si necesitas principalmente diagnóstico básico del motor y prefieres una pantalla integrada.",blue:"Una buena opción si buscas información ampliada de códigos e informes de reparación desde el teléfono, siempre que confirmes la cobertura de tu vehículo.",obdlink:"Una opción que vale la pena investigar para redes específicas Ford/GM y datos ampliados mediante aplicación. Verifica marca, año y cobertura adicional OEM exactos.",a30m:"Opción compacta conectada al teléfono para pruebas bidireccionales compatibles si buscas mantener un presupuesto más bajo.",d7s:"Opción tipo tableta si buscas más funciones y equipo dedicado. Verifica la revisión exacta del D7S y la función de servicio que necesitas.",topdon:"Opción tipo tableta si la comunicación inalámbrica y sus funciones de servicio coinciden con tus tareas de reparación.",autel:"Opción de tableta de categoría superior si buscas sus especificaciones y funciones publicadas; verifica la función exacta y el paquete."};
+   $("resultCards").innerHTML=keys.map((k,i)=>card(k,reasons[k],i)).join("");
+  }
+  const warnings=[];
+  if(!year||!make||!model)warnings.push("For a useful compatibility check, fill in the exact model year, make and model. Engine/trim can narrow it further.");
+  if(older)warnings.push("Este vehículo podría ser anterior a los requisitos OBD-II estándar de EE. UU. Confirma el conector y protocolo antes de comprar un lector OBD-II genérico.");
+  if(isTesla)warnings.push("El diagnóstico de Tesla utiliza acceso y procedimientos específicos del fabricante. No supongas que un escáner OBD-II genérico puede acceder a los sistemas; confirma los adaptadores y programas necesarios.");
+  if(evHint)warnings.push("Tu selección sugiere un vehículo eléctrico o híbrido. Confirma por separado la compatibilidad con batería de alto voltaje, carga y sistemas específicos del fabricante; la compatibilidad OBD-II normal no lo garantiza.");
+  if(isFord||isGM)warnings.push("Los datos ampliados Ford/GM varían según año, módulo y aplicación. Verifica la cobertura OEM exacta, no solo la compatibilidad OBD-II general del adaptador.");
+  if(["bmw","mercedes-benz","audi","volkswagen","porsche","volvo","jaguar","land rover"].includes(mk))warnings.push("Algunas marcas europeas requieren software específico, acceso a pasarela o suscripciones. Confirma el módulo y procedimiento exactos para este año de modelo.");
+  if(task==="active")warnings.push("Un escáner que lee códigos ABS o de motor puede no incluir la prueba activa que necesitas. Confirma el comando exacto para tu vehículo y módulo.");
+  if(specific)warnings.push('You entered this specific job: "'+specific+'". Ask the manufacturer to confirm this exact operation on your vehicle.');
+  if(market!=="Estados Unidos")warnings.push("You selected a vehicle originally sold outside the Estados Unidos. U.S. product coverage and software may differ; verify regional compatibility before ordering from Amazon.com.");
+  warnings.push("Este buscador no se conecta a bases de datos en vivo de los fabricantes y no puede garantizar compatibilidad. Usa el verificador oficial de cobertura o solicita confirmación por escrito antes de comprar.");
+  $("compatibilityNote").textContent=warnings.join(" ");
+  $("vehicleSummary").textContent="Vehículo: "+[year,make,model,engine].filter(Boolean).join(" ")+" · Mercado original de venta: "+market+" · Trabajo principal: "+$("task").selectedOptions[0].textContent+" · Presupuesto: "+$("budget").selectedOptions[0].textContent+". Tus respuestas permanecen en esta página y no se envían a ningún servidor.";
+  $("results").classList.add("show");$("results").scrollIntoView({behavior:"smooth",block:"start"});
+ });
+ $("resetBtn").addEventListener("click",()=>{
+  ["year","make","model","engine","specificFunction"].forEach(id=>$(id).value="");
+  ["makeOther","modelOther","engineOther"].forEach(id=>{$(id).value="";$(id).hidden=true;});
+  modelSelect.disabled=true;modelSelect.innerHTML='<option value="">Elige la marca first</option>';
+  $("task").value="basic";$("budget").value="300";$("device").value="any";$("experience").value="diy";$("market").value="Estados Unidos";$("results").classList.remove("show");
+ });
+})();
+</script></body></html>
