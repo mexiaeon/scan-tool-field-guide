@@ -257,3 +257,7 @@ button,input,select,textarea{max-width:100%;font:inherit}
  .recommendation-card{padding:17px}
  .amazon-cta{width:100%;min-height:50px}
 }
+
+/* Secondary Amazon product-photo links under recommendation buttons */
+.recommendation-card .amazon-photo-link{display:inline-block;margin-top:10px;color:var(--accent2);font-size:13px;font-weight:750;text-decoration:underline;text-underline-offset:3px}
+.recommendation-card .amazon-photo-link:hover{color:#fff}
